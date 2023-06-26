@@ -5,9 +5,10 @@
 	"name": "KraXen72",
 	"url": "https://github.com/KraXen72"
   },
+  "publisher": "KraXen72",
   "license": "GPL-3.0",
   "description": "Personal VSCode theme based on new DarkV2 and United Ubuntu theme by SolarLiner",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "engines": {
     "vscode": "^1.79.0"
   },
