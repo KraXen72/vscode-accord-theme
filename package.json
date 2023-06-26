@@ -14,6 +14,10 @@
   "sponsor": {
 	"url": "https://ko-fi.com/kraxen72"
   },
+  "repository": {
+	"url": "https://github.com/KraXen72/vscode-accord-theme"
+  },
+  "icon": "icon.png",
   "categories": [
     "Themes"
   ],
