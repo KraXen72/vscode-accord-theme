@@ -2,21 +2,21 @@
   "name": "accord",
   "displayName": "Accord",
   "author": {
-	"name": "KraXen72",
-	"url": "https://github.com/KraXen72"
+    "name": "KraXen72",
+    "url": "https://github.com/KraXen72"
   },
   "publisher": "KraXen72",
   "license": "GPL-3.0",
   "description": "Personal VSCode theme based on new DarkV2 and United Ubuntu theme by SolarLiner",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "engines": {
     "vscode": "^1.79.0"
   },
   "sponsor": {
-	"url": "https://ko-fi.com/kraxen72"
+    "url": "https://ko-fi.com/kraxen72"
   },
   "repository": {
-	"url": "https://github.com/KraXen72/vscode-accord-theme"
+    "url": "https://github.com/KraXen72/vscode-accord-theme"
   },
   "icon": "icon.png",
   "categories": [
