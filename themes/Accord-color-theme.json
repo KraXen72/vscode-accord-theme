@@ -154,12 +154,12 @@
 		// "editorOverviewRuler.border": "#010409",
 
 		// custom bracket colors from nord
-		"editorBracketHighlight.foreground1": "#5caeef",
-		"editorBracketHighlight.foreground2": "#dfb976",
-		"editorBracketHighlight.foreground3": "#c172d9",
-		"editorBracketHighlight.foreground4": "#4fb1bc",
+		"editorBracketHighlight.foreground1": "#abb2c0",
+		"editorBracketHighlight.foreground2": "#5caeef",
+		"editorBracketHighlight.foreground3": "#4fb1bc",
+		"editorBracketHighlight.foreground4": "#c172d9",
 		"editorBracketHighlight.foreground5": "#97c26c",
-		"editorBracketHighlight.foreground6": "#abb2c0",
+		"editorBracketHighlight.foreground6": "#dfb976",
 		"editorBracketHighlight.unexpectedBracket.foreground": "#db6165",
 
 		// green apple accent color #7CB342. complementary color is #427cb3, analogous is #42b353
