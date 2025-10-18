@@ -13,7 +13,7 @@
 		"editorBracketMatch.background": "#ea542130",
 		"editorCursor.foreground": "#ea5421",
 		"editorGroupHeader.noTabsBackground": "#111111",
-		"editorIndentGuide.background": "#404040",
+		"editorIndentGuide.background1": "#404040",
 		"focusBorder": "#ff000000",
 		"inputValidation.errorBackground": "#ea2121",
 		"inputValidation.infoBackground": "#48a4b2",
