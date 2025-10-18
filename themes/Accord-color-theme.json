@@ -465,12 +465,6 @@
 			}
 		},
 		{
-			"scope": "entity.name.tag.css",
-			"settings": {
-				"foreground": "#D7BA7D"
-			}
-		},
-		{
 			"scope": [
 				"markup.heading", 
 				"markdown.heading"
@@ -499,12 +493,6 @@
 			"scope": "markup.inline.raw",
 			"settings": {
 				"foreground": "#CE9178"
-			}
-		},
-		{
-			"scope": "meta.selector",
-			"settings": {
-				"foreground": "#D7BA7D"
 			}
 		},
 		{
@@ -739,6 +727,7 @@
 			}
 		},
 		{
+			"name": "markup/markdown quotes",
 			"scope": [
 				"markup.quote"
 			],
@@ -838,6 +827,8 @@
 		},
 		{
 			"scope": [
+				"meta.selector",
+				"entity.name.tag.css",
 				"entity.other.attribute-name.class.css",
 				"entity.other.attribute-name.class.mixin.css",
 				"entity.other.attribute-name.id.css",
