@@ -31,7 +31,25 @@
 			"entity.other.inherited-class"
 		],
 		"settings": {
-			"foreground": "#FFFFB6"
+			"foreground": "#FFFFB6",
+			"lets": {
+				"try": {
+					"adding": {
+						"some": {
+							"super": {
+								"deeply": {
+									"nested": {
+										"stuff": {
+											"answer": 42,
+											"cool": ["A", "B"]
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
 		}
 	}
 }
