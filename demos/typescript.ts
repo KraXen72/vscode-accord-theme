@@ -22,6 +22,11 @@ export interface EditorPosition {
 	col: number;
 }
 
+let someVariable: number = 0;
+if (someVariable == 9999) console.log("comparison");
+if (someVariable === 9999) console.log("comparison");
+if (someVariable = 100) console.log("assigns!!")
+
 // Component Props Types
 
 export interface EditorProps {
@@ -97,7 +102,7 @@ export async function initHarper(): Promise<void> {
 		linter = new WorkerLinter({
 			binary,
 			dialect,
-		});
+		});	
 
 		await linter.setup();
 

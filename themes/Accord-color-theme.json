@@ -208,17 +208,35 @@
 		{
 			"name": "keywords",
 			"scope": [
+				"keyword",
+				"keyword.other.directive.using",
+				"keyword.control.exception",
+				"keyword.control.flow",
+				"keyword.control.trycatch",
+				"keyword.modifier",
+				"storage.modifier",
+				"storage.type",
+			],
+			"settings": {
+				"foreground": "#FF73FD"
+			}
+		},
+		{
+			"name": "special keywords",
+			"scope": [
 				"keyword.operator.new",
 				"keyword.operator.expression",
 				"keyword.operator.cast",
 				"keyword.operator.sizeof",
-				"keyword.operator.logical.python"
+				"keyword.operator.logical.python",
+				"keyword.operator.assignment" // differentiate = from ==
 			],
 			"settings": {
 				"foreground": "#569CD6"
 			}
 		},
 		{
+			"name": "variables",
 			"scope": [
 				"variable",
 				"meta.variable",
@@ -310,22 +328,6 @@
 			],
 			"settings": {
 				"foreground": "#FFFFB6"
-			}
-		},
-		{
-			"name": "keywords",
-			"scope": [
-				"keyword",
-				"keyword.other.directive.using",
-				"keyword.control.exception",
-				"keyword.control.flow",
-				"keyword.control.trycatch",
-				"keyword.modifier",
-				"storage.modifier",
-				"storage.type"
-			],
-			"settings": {
-				"foreground": "#FF73FD"
 			}
 		},
 		{
@@ -694,7 +696,7 @@
 				"entity.name.tag",
 				"meta.tag.sgml",
 				"support.other.variable", // unsure
-				"string.other.link",
+				// "string.other.link", // unsure
 				"markup.deleted.git_gutter"
 			],
 			"settings": {
@@ -1183,7 +1185,6 @@
 		{
 			"scope": [
 				"entity.other.attribute-name",
-				"meta.attribute"
 			],
 			"settings": {
 				"foreground": "#96CBFE"
