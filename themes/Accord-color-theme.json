@@ -377,8 +377,9 @@
 			}
 		},
 		{
-			"name": "imports",
+			"name": "imports, ifs & similar",
 			"scope": [
+				"meta.brace",
 				"keyword.control",
 				"keyword.control.as",
 				"keyword.control.import",
@@ -525,6 +526,7 @@
 			}
 		},
 		{
+			"name": "invalid text",
 			"scope": [
 				"invalid",
 				"invalid.illegal",
@@ -562,14 +564,6 @@
 			],
 			"settings": {
 				"foreground": "#B5B3AA"
-			}
-		},
-		{
-			"scope": [
-				"meta.brace"
-			],
-			"settings": {
-				"foreground": "#B5B3AA",
 			}
 		},
 		{
