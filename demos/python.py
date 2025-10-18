@@ -39,6 +39,11 @@ class Tags(TypedDict):
 
 fallback_mv_keys = ["artist", "albumartist"]
 
+monkey = {
+	"some key": "some value",
+	"age": 14
+}
+
 def metadata_applier(tags: Tags, fixed_location: Path, exclude_tags: list[str], fallback_mv = True):
 	"""set fallback_mv = True until auxio supports proper multi-value m4a tags from mutagen"""
 	handle = MediaFile(fixekd_location)

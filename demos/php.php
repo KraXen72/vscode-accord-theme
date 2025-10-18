@@ -34,3 +34,7 @@ class HelloWorldTest extends PHPUnit_Framework_TestCase
     }
 }
 ?>
+
+<div>
+	<span class="sigma">rizz</span>
+</div>
