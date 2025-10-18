@@ -514,12 +514,7 @@
 				"foreground": "#6796E6"
 			}
 		},
-		{
-			"scope": "meta.preprocessor.numeric",
-			"settings": {
-				"foreground": "#B5CEA8"
-			}
-		},
+		
 		{
 			"scope": "meta.structure.dictionary.key.python",
 			"settings": {
@@ -542,12 +537,7 @@
 				"foreground": "#9CDCFE"
 			}
 		},
-		{
-			"scope": "constant.sha.git-rebase",
-			"settings": {
-				"foreground": "#B5CEA8"
-			}
-		},
+		
 		{
 			"scope": [
 				"invalid",
