@@ -221,6 +221,7 @@
 				"keyword.other.directive.using",
 				"keyword.control.exception",
 				"keyword.control.flow",
+				"keyword.control.return",
 				"keyword.control.trycatch",
 				"keyword.modifier",
 				"storage.modifier",
@@ -234,6 +235,7 @@
 			"name": "special keywords",
 			"scope": [
 				"keyword.operator.new",
+				"keyword.control.new",
 				"keyword.operator.expression",
 				"keyword.operator.cast",
 				"keyword.operator.sizeof",
@@ -338,7 +340,9 @@
 			"name": "classes",
 			"scope": [
 				"support.class",
+				"support.class.dart",
 				"entity.name.type.class",
+				"entity.name.type.module",
 				"entity.other.inherited-class"
 			],
 			"settings": {
@@ -353,6 +357,7 @@
 				"keyword.control.import",
 				"keyword.control.from",
 				"keyword.import",
+				"keyword.other.import",
 				"storage.modifier.import.java",
 				"storage.modifier.package.java"
 			],
@@ -416,7 +421,6 @@
 				"string",
 				"constant.other.symbol",
 				"constant.other.key",
-				"markup.inserted.git_gutter",
 				"meta.group.braces.curly constant.other.object.key.js string.unquoted.label.js",
 				"string.other.link"
 			],
@@ -479,18 +483,6 @@
 			"scope": "markup.italic",
 			"settings": {
 				"fontStyle": "italic"
-			}
-		},
-		{
-			"scope": "markup.inserted",
-			"settings": {
-				"foreground": "#B5CEA8"
-			}
-		},
-		{
-			"scope": "markup.deleted",
-			"settings": {
-				"foreground": "#CE9178"
 			}
 		},
 		{
@@ -676,7 +668,6 @@
 				"meta.tag.sgml",
 				"support.other.variable", // unsure
 				// "string.other.link", // unsure
-				"markup.deleted.git_gutter"
 			],
 			"settings": {
 				"foreground": "#FF6C60"
@@ -1099,6 +1090,7 @@
 				"constant.other.color.rgb-value",
 				"constant.other.rgb-value",
 				"support.constant.color"
+				// "meta.property-value.css", // grid area names
 			],
 			"settings": {
 				"foreground": "#CE9178"
@@ -1190,7 +1182,8 @@
 				"constant.character",
 				"constant.escape",
 				"keyword.other.unit",
-				"keyword.other"
+				"keyword.other",
+				"punctuation.definition.entity.html"
 			],
 			"settings": {
 				"foreground": "#E9C062"
@@ -1225,7 +1218,6 @@
 		},
 		{
 			"scope": [
-				"support.class.dart",
 				"keyword.other.documentation",
 				"meta.separator.markdown",
 				"string.other.number.mdx",
