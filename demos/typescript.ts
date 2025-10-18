@@ -137,7 +137,10 @@ export async function initHarper(): Promise<void> {
  */
 export function getLinter(): WorkerLinter {
 	if (!linter) {
-		throw new Error('Harper linter not initialized. Call initHarper() first.');
+		throw new Error(`
+			Harper linter not initialized. Call initHarper() first.
+			${linter} ${typeof getLinter}
+		`);
 	}
 	return linter;
 }
