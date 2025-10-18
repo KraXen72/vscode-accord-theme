@@ -486,12 +486,6 @@
 			}
 		},
 		{
-			"scope": "markup.changed",
-			"settings": {
-				"foreground": "#569CD6"
-			}
-		},
-		{
 			"scope": "beginning.punctuation.definition.list.markdown",
 			"settings": {
 				"foreground": "#6796E6"
@@ -507,12 +501,6 @@
 			"scope": "meta.selector",
 			"settings": {
 				"foreground": "#D7BA7D"
-			}
-		},
-		{
-			"scope": "punctuation.definition.tag",
-			"settings": {
-				"foreground": "#808080"
 			}
 		},
 		{
@@ -642,13 +630,16 @@
 				"punctuation.section.class.end",
 				"meta.tag",
 				"punctuation.definition.tag",
-				"punctuation.separator.inheritance.php",
+				"punctuation.separator",
 				"punctuation.definition.tag.html",
 				"punctuation.definition.tag.begin.html",
 				"punctuation.definition.tag.end.html",
 				"punctuation.section.embedded",
 				"keyword.other.template",
-				"keyword.other.substitution"
+				"keyword.other.substitution",
+				"punctuation.terminator",
+				"punctuation.definition.string",
+				"punctuation.section.block"
 			],
 			"settings": {
 				"foreground": "#B5B3AA"
@@ -1161,19 +1152,6 @@
 			}
 		},
 		{
-			"scope": [
-				"punctuation",
-				"punctuation.terminator",
-				"punctuation.definition.tag",
-				"punctuation.separator",
-				"punctuation.definition.string",
-				"punctuation.section.block"
-			],
-			"settings": {
-				"foreground": "#FFFFFFC5"
-			}
-		},
-		{
 			"name": "constants",
 			"scope": [
 				"constant.numeric",
@@ -1245,7 +1223,6 @@
 				"meta.use.php",
 				"support.other.namespace.use.php",
 				"support.other.namespace.php",
-				"markup.changed.git_gutter",
 				"support.type.sys-types"
 			],
 			"settings": {
