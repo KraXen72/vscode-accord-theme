@@ -295,16 +295,6 @@
 		// 	}
 		// },
 		{
-			"scope": [
-				"entity.name.type.enum",
-				"entity.name.type.struct",
-				"entity.name.type.interface"
-			],
-			"settings": {
-				"foreground": "#4EC9B0"
-			}
-		},
-		{
 			"name": "primitive types",
 			"scope": [
 				"support.type"
@@ -337,6 +327,17 @@
 				"storage.type.object.array.groovy",
 				"storage.type.primitive.array.groovy",
 				"storage.type.primitive.groovy"
+			],
+			"settings": {
+				"foreground": "#4EC9B0"
+			}
+		},
+		{
+			"name": "OOP lang features",
+			"scope": [
+				"entity.name.type.enum",
+				"entity.name.type.struct",
+				"entity.name.type.interface"
 			],
 			"settings": {
 				"foreground": "#4EC9B0"
@@ -437,7 +438,10 @@
 
 		// -----
 		{
-			"scope": "emphasis",
+			"scope": [
+				"emphasis", 
+				"markup.italic"
+			],
 			"settings": {
 				"fontStyle": "italic"
 			}
@@ -483,12 +487,6 @@
 			],
 			"settings": {
 				"foreground": "#96cbfe"
-			}
-		},
-		{
-			"scope": "markup.italic",
-			"settings": {
-				"fontStyle": "italic"
 			}
 		},
 		{
@@ -559,18 +557,6 @@
 			"scope": "constant.sha.git-rebase",
 			"settings": {
 				"foreground": "#B5CEA8"
-			}
-		},
-		{
-			"scope": [
-				"meta.type.cast.expr",
-				"meta.type.new.expr",
-				"support.constant.math",
-				"support.constant.dom",
-				"support.constant.json",
-			],
-			"settings": {
-				"foreground": "#4EC9B0"
 			}
 		},
 		{
@@ -1007,18 +993,6 @@
 			],
 			"settings": {
 				"foreground": "#E9C062"
-			}
-		},
-		{
-			"scope": [],
-			"settings": {
-				"foreground": "#A8FF60"
-			}
-		},
-		{
-			"scope": [],
-			"settings": {
-				"foreground": "#96CBFE"
 			}
 		},
 		{
