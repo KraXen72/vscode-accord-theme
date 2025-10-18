@@ -375,7 +375,6 @@
 				"meta.function.method",
 				"meta.function-call.generic",
 				"meta.method.declaration meta.definition.method",
-				"meta.object-literal.key entity.name.function",
 			],
 			"settings": {
 				"foreground": "#96CBFE"
