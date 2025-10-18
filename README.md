@@ -23,3 +23,8 @@ I am aware that some keywords might not be properly highlighted, feel free to re
 ![python](screenshots/python.png)
 ![css](screenshots/css.png)
 ![json](screenshots/json.png)
+
+---
+
+## credits
+- thanks to [night-owl-vscode-theme](https://github.com/sdras/night-owl-vscode-theme) for the `demos/`
