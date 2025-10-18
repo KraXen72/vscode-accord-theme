@@ -263,25 +263,37 @@
 				"variable.other.property",
 				"variable.other.constant",
 				"meta.property",
+				"meta.property-value.css",
 				"variable.readonly"
 			],
 			"settings": {
-				"foreground": "#FFFFFFC5"
+				// "foreground": "#FFFFFFC5"
+				"foreground": "#FFFFFFD3"
 			}
 		},
 		{
+			"name": "html tags",
 			"scope": [
-				"variable.argument.css",
-				"variable.other.global",
-				// unsure
-				"entity.name.module.js",
-				"variable.import.parameter.js",
-				"variable.other.class.js",
+				"entity.name.tag",
+				"meta.tag.sgml",
 			],
 			"settings": {
 				"foreground": "#FF6C60"
 			}
 		},
+		// {
+		// 	"name": "css/scss/less variables",
+		// 	"scope": [
+		// 		"variable.other.global",
+		// 		"variable.argument.css",
+		// 		"variable.css",
+		// 		"variable.scss",
+		// 		"variable.other.less"
+		// 	],
+		// 	"settings": {
+		// 		"foreground": "#ffffb6"
+		// 	}
+		// },
 		{
 			"scope": [
 				"entity.name.type.enum",
@@ -538,17 +550,6 @@
 			}
 		},
 		{
-			"scope": [
-				"support.type.vendored.property-name",
-				"variable.css",
-				"variable.scss",
-				"variable.other.less"
-			],
-			"settings": {
-				"foreground": "#9CDCFE"
-			}
-		},
-		{
 			"scope": "support.function.git-rebase",
 			"settings": {
 				"foreground": "#9CDCFE"
@@ -575,7 +576,8 @@
 		{
 			"scope": [
 				"invalid",
-				"invalid.illegal"
+				"invalid.illegal",
+				"token.error-token"
 			],
 			"settings": {
 				"foreground": "#FF6C60"
@@ -617,17 +619,6 @@
 			],
 			"settings": {
 				"foreground": "#B5B3AA",
-			}
-		},
-		{
-			"scope": [
-				"entity.name.tag",
-				"meta.tag.sgml",
-				"support.other.variable", // unsure
-				// "string.other.link", // unsure
-			],
-			"settings": {
-				"foreground": "#FF6C60"
 			}
 		},
 		{
@@ -838,12 +829,6 @@
 			"scope": "token.warn-token",
 			"settings": {
 				"foreground": "#FFFFB6"
-			}
-		},
-		{
-			"scope": "token.error-token",
-			"settings": {
-				"foreground": "#FF6C60"
 			}
 		},
 		{
