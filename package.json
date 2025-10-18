@@ -30,5 +30,8 @@
         "path": "./themes/Accord-color-theme.json"
       }
     ]
+  },
+  "devDependencies": {
+    "jsonc-parser": "^3.3.1"
   }
 }
