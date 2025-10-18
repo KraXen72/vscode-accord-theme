@@ -201,6 +201,26 @@
 		},
 		{
 			"scope": [
+				"keyword.operator"
+			],
+			"settings": {
+				"foreground": "#FFFFFFC5"
+			}
+		},
+		{
+			"scope": [
+				"keyword.operator.new",
+				"keyword.operator.expression",
+				"keyword.operator.cast",
+				"keyword.operator.sizeof",
+				"keyword.operator.logical.python"
+			],
+			"settings": {
+				"foreground": "#569CD6"
+			}
+		},
+		{
+			"scope": [
 				"variable",
 				"meta.variable",
 				"variable.other.object.property",
@@ -219,14 +239,6 @@
 			"scope": "variable.language",
 			"settings": {
 				"foreground": "#569CD6"
-			}
-		},
-		{
-			"scope": [
-				"variable.interpolation"
-			],
-			"settings": {
-				"foreground": "#B18A3D"
 			}
 		},
 		{
@@ -375,12 +387,6 @@
 			"scope": "header",
 			"settings": {
 				"foreground": "#000080"
-			}
-		},
-		{
-			"scope": "constant.language",
-			"settings": {
-				"foreground": "#569CD6"
 			}
 		},
 		{
@@ -562,31 +568,12 @@
 		{
 			"scope": [
 				"support.type.vendored.property-name",
-				"support.type.property-name",
 				"variable.css",
 				"variable.scss",
 				"variable.other.less"
 			],
 			"settings": {
 				"foreground": "#9CDCFE"
-			}
-		},
-		{
-			"scope": "keyword.operator",
-			"settings": {
-				"foreground": "#D4D4D4"
-			}
-		},
-		{
-			"scope": [
-				"keyword.operator.new",
-				"keyword.operator.expression",
-				"keyword.operator.cast",
-				"keyword.operator.sizeof",
-				"keyword.operator.logical.python"
-			],
-			"settings": {
-				"foreground": "#569CD6"
 			}
 		},
 		{
@@ -681,20 +668,6 @@
 			],
 			"settings": {
 				"foreground": "#FF6C60"
-			}
-		},
-		{
-			"scope": [
-				"constant.numeric",
-				"constant.language",
-				"support.constant",
-				"constant.character",
-				"constant.escape",
-				"keyword.other.unit",
-				"keyword.other"
-			],
-			"settings": {
-				"foreground": "#E9C062"
 			}
 		},
 		{
@@ -1227,25 +1200,8 @@
 		},
 		{
 			"scope": [
-				"keyword.operator"
-			],
-			"settings": {
-				"foreground": "#FFFFFFC5"
-			}
-		},
-		{
-			"scope": [
 				"keyword.operator.new",
 				"keyword.operator.expression"
-			],
-			"settings": {
-				"foreground": "#569CD6"
-			}
-		},
-		{
-			"scope": [
-				"punctuation.definition.template-expression.begin",
-				"punctuation.definition.template-expression.end"
 			],
 			"settings": {
 				"foreground": "#569CD6"
@@ -1339,15 +1295,49 @@
 			}
 		},
 		{
+			"name": "constants",
 			"scope": [
-				"storage.type.numeric.go",
-				"storage.type.byte.go",
-				"storage.type.boolean.go",
-				"storage.type.string.go",
-				"storage.type.uintptr.go",
-				"storage.type.error.go",
-				"storage.type.rune.go",
-				"constant.language.go",
+				"constant.numeric",
+				"constant.language",
+				"support.constant",
+				"constant.character",
+				"constant.escape",
+				"keyword.other.unit",
+				"keyword.other"
+			],
+			"settings": {
+				"foreground": "#E9C062"
+			}
+		},
+		{
+			"name": "interpolation/template string/fstring brackets",
+			"scope": [
+				"punctuation.definition.template-expression.begin",
+				"punctuation.definition.template-expression.end",
+				"meta.fstring.python constant.character"
+				// "meta.fstring.python"
+			],
+			"settings": {
+				"foreground": "#569CD6"
+			}
+		},
+		{
+			"name": "go",
+			"scope": [
+				"source.go storage.type.numeric.go",
+				"source.go storage.type.byte.go",
+				"source.go storage.type.boolean.go",
+				"source.go storage.type.string.go",
+				"source.go storage.type.uintptr.go",
+				"source.go storage.type.error.go",
+				"source.go storage.type.rune.go",
+			],
+			"settings": {
+				"foreground": "#E9C062"
+			}
+		},
+		{
+			"scope": [
 				"support.class.dart",
 				"keyword.other.documentation",
 				"punctuation.definition.list.begin.markdown",
