@@ -449,35 +449,6 @@
 		},
 		{
 			"scope": [
-				"entity.other.attribute-name.class.css",
-				"entity.other.attribute-name.class.mixin.css",
-				"entity.other.attribute-name.id.css",
-				"entity.other.attribute-name.parent-selector.css",
-				"entity.other.attribute-name.pseudo-class.css",
-				"entity.other.attribute-name.pseudo-element.css",
-				"source.css.less entity.other.attribute-name.id",
-				"entity.other.attribute-name.attribute.scss",
-				"entity.other.attribute-name.scss"
-			],
-			"settings": {
-				"foreground": "#D7BA7D"
-			}
-		},
-		{
-			"scope": "invalid",
-			"settings": {
-				"foreground": "#F44747"
-			}
-		},
-		{
-			"scope": "markup.bold",
-			"settings": {
-				"foreground": "#569CD6",
-				"fontStyle": "bold"
-			}
-		},
-		{
-			"scope": [
 				"markup.heading", 
 				"markdown.heading"
 			],
@@ -890,21 +861,6 @@
 			],
 			"settings": {
 				"foreground": "#B5B3AA"
-			}
-		},
-		{
-			"scope": [
-				"text.html.markdown meta.dummy.line-break"
-			],
-			"settings": {}
-		},
-		{
-			"scope": [
-				"markup.italic"
-			],
-			"settings": {
-				"foreground": "#FF6C60",
-				"fontStyle": "italic"
 			}
 		},
 		{
