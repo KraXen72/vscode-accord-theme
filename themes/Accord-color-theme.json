@@ -192,9 +192,7 @@
 	},
 	"tokenColors": [
 		{
-			"scope": [
-				"source",
-			],
+			"scope": [ "source"],
 			"settings": {
 				"foreground": "#FFFFFFD3"
 			}
@@ -208,6 +206,7 @@
 			}
 		},
 		{
+			"name": "keywords",
 			"scope": [
 				"keyword.operator.new",
 				"keyword.operator.expression",
@@ -371,6 +370,38 @@
 				"foreground": "#96CBFE"
 			}
 		},
+		{
+			"name": "comments",
+			"scope": [
+				"comment",
+				"punctuation.definition.comment",
+				"comment.documentation",
+				"comment.line.documentation",
+				// docstrings styled as comments:
+				// "source.python string.quoted.docstring",
+				// "source.python string.quoted.docstring punctuation.definition.string"
+			],
+			"settings": {
+				"foreground": "#8BBD92",
+				"fontStyle": "italic"
+			}
+		},
+		{
+			"name": "strings",
+			"scope": [
+				"string",
+				"constant.other.symbol",
+				"constant.other.key",
+				"markup.heading",
+				"markup.inserted.git_gutter",
+				"meta.group.braces.curly constant.other.object.key.js string.unquoted.label.js"
+			],
+			"settings": {
+				"foreground": "#A8FF60"
+			}
+		},
+
+		// -----
 		{
 			"scope": "emphasis",
 			"settings": {
@@ -668,20 +699,6 @@
 			],
 			"settings": {
 				"foreground": "#FF6C60"
-			}
-		},
-		{
-			"scope": [
-				"string",
-				"constant.other.symbol",
-				"constant.other.key",
-				// "entity.other.inherited-class",
-				"markup.heading",
-				"markup.inserted.git_gutter",
-				"meta.group.braces.curly constant.other.object.key.js string.unquoted.label.js"
-			],
-			"settings": {
-				"foreground": "#A8FF60"
 			}
 		},
 		{
@@ -1071,12 +1088,6 @@
 			}
 		},
 		{
-			"scope": "comment",
-			"settings": {
-				"foreground": "#8BBD92"
-			}
-		},
-		{
 			"scope": [
 				"source.css support.type.property-name",
 				"source.sass support.type.property-name",
@@ -1147,34 +1158,7 @@
 				"foreground": "#FFFFFFC5"
 			}
 		},
-		{
-			"scope": [
-				"comment",
-				"punctuation.definition.comment"
-			],
-			"settings": {
-				"foreground": "#8BBD92",
-				"fontStyle": "italic"
-			}
-		},
-		{
-			"scope": [
-				"comment.documentation",
-				"comment.line.documentation"
-			],
-			"settings": {
-				"foreground": "#8BBD92",
-				"fontStyle": "italic"
-			}
-		},
-		{
-			"scope": [
-				"constant.numeric"
-			],
-			"settings": {
-				"foreground": "#E9C062"
-			}
-		},
+
 		{
 			"scope": [
 				"support.constant.property-value",
