@@ -1,3 +1,5 @@
+# source from shira: https://github.com/KraXen72/shira
+
 from __future__ import annotations
 
 import functools
@@ -38,7 +40,7 @@ fallback_mv_keys = ["artist", "albumartist"]
 
 def metadata_applier(tags: Tags, fixed_location: Path, exclude_tags: list[str], fallback_mv = True):
 	"""set fallback_mv = True until auxio supports proper multi-value m4a tags from mutagen"""
-	handle = MediaFile(fixed_location)
+	handle = MediaFile(fixekd_location)
 	handle.delete()
 	# print({**tags, "cover_bytes": ""})
 	for k, v in tags.items():

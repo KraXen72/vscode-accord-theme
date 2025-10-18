@@ -24,6 +24,11 @@ export interface EditorPosition {
 
 let someVariable: number = 0;
 if (someVariable == 9999) console.log("comparison");
+if (someVariable != 9999) console.log("comparison");
+if (someVariable > 9999) console.log("comparison");
+if (someVariable >= 9999) console.log("comparison");
+if (someVariable < 9999) console.log("comparison");
+if (someVariable <= 9999) console.log("comparison");
 if (someVariable === 9999) console.log("comparison");
 if (someVariable = 100) console.log("assigns!!")
 

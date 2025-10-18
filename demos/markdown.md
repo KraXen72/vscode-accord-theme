@@ -7,6 +7,9 @@
 # Installation
 
 1.  Install [Visual Studio Code](https://code.visualstudio.com/)
+
+https://code.visualstudio.com/
+
 2.  Launch Visual Studio Code
 3.  Choose **Extensions** from menu
 4.  Search for `night-owl`
@@ -24,3 +27,10 @@ Heading 2
 --------------
 
 ### Heading 3
+
+sigma rizz:
+- i think it's 
+
+## `sub`/`sup` vs LaTeX
+- yeah mah
+- this is a list alright

@@ -229,12 +229,18 @@
 				"keyword.operator.cast",
 				"keyword.operator.sizeof",
 				"keyword.operator.logical.python",
-				"keyword.operator.assignment" // differentiate = from ==
 			],
 			"settings": {
 				"foreground": "#569CD6"
 			}
 		},
+		// {
+		// 	"name": "differentiate = and ==",
+		// 	"scope": [ "keyword.operator.assignment"  ],
+		// 	"settings": {
+		// 		"foreground": "#569CD6",
+		// 	}
+		// },
 		{
 			"name": "variables",
 			"scope": [
@@ -373,6 +379,13 @@
 			}
 		},
 		{
+			"name": "attributes",
+			"scope": "entity.other.attribute-name",
+			"settings": {
+				"foreground": "#9CDCFE"
+			}
+		},
+		{
 			"name": "comments",
 			"scope": [
 				"comment",
@@ -423,14 +436,6 @@
 			}
 		},
 		{
-			"scope": [
-				"constant.numeric"
-			],
-			"settings": {
-				"foreground": "#B5CEA8"
-			}
-		},
-		{
 			"scope": "constant.regexp",
 			"settings": {
 				"foreground": "#646695"
@@ -440,12 +445,6 @@
 			"scope": "entity.name.tag.css",
 			"settings": {
 				"foreground": "#D7BA7D"
-			}
-		},
-		{
-			"scope": "entity.other.attribute-name",
-			"settings": {
-				"foreground": "#9CDCFE"
 			}
 		},
 		{
@@ -1180,14 +1179,6 @@
 			],
 			"settings": {
 				"foreground": "#FFFFB6"
-			}
-		},
-		{
-			"scope": [
-				"entity.other.attribute-name",
-			],
-			"settings": {
-				"foreground": "#96CBFE"
 			}
 		},
 		{
