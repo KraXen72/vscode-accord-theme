@@ -184,11 +184,20 @@
 		"settings.modifiedItemIndicator": "#7CB342",
 		"settings.headerForeground": "#7CB342",
 		"panelTitle.activeBorder": "#7CB342",
-		"breadcrumb.activeSelectionForeground": "#7CB342",
 		"menu.selectionForeground": "#7CB342",
 		"menubar.selectionForeground": "#7CB342",
 		"scrollbarSlider.activeBackground": "#7CB34250",
-		"terminal.tab.activeBorder": "#7CB342"
+		"terminal.tab.activeBorder": "#7CB342",
+		"notebook.focusedCellBorder": "#7CB342",
+
+		"breadcrumb.foreground": "#ffffff70",
+		"breadcrumb.activeSelectionForeground": "#7CB342",
+
+		// faint diff colors
+		"diffEditor.insertedLineBackground": "#7cb3420F",
+		"diffEditor.insertedTextBackground": "#7cb3420F",
+		"diffEditor.removedLineBackground": "#ff000012",
+		"diffEditor.removedTextBackground": "#ff000012",
 	},
 	"tokenColors": [
 		{
