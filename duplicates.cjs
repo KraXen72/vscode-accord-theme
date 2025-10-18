@@ -34,14 +34,13 @@ function main() {
       process.exit(1);
     }
 
-    // Extract all rules with their individual scopes
     const rules = data.tokenColors.map((rule, index) => ({
       index,
       scopes: normalizeScopeToArray(rule.scope),
     }));
 
-    // === 1. Full Duplicates: group by identical scope string ===
-    const scopeToRules = new Map(); // "scopeString" => Set of rule indices
+    // === 1. Full Duplicates (exact same scope string in >=2 rules) ===
+    const scopeToRules = new Map();
 
     for (const rule of rules) {
       for (const scopeStr of rule.scopes) {
@@ -52,40 +51,53 @@ function main() {
       }
     }
 
-    // Build full duplicate groups (only if >=2 rules share the scope)
     const fullDuplicates = [];
-    for (const [scopeStr, ruleIndicesSet] of scopeToRules) {
-      const ruleIndices = Array.from(ruleIndicesSet);
-      if (ruleIndices.length >= 2) {
-        fullDuplicates.push({
-          scope: scopeStr,
-          indices: ruleIndices,
-        });
+    for (const [scopeStr, indicesSet] of scopeToRules) {
+      const indices = Array.from(indicesSet);
+      if (indices.length >= 2) {
+        fullDuplicates.push({ scope: scopeStr, indices });
       }
     }
 
-    // === 2. Shadowed Duplicates: pairwise scope string suffix checks ===
+    // === 2. Shadowed Duplicates ===
     const shadowedPairs = [];
 
-    // Get all unique scope strings with their source rule indices
-    const allScopeEntries = [];
+    // --- (a) Intra-rule shadowing ---
     for (const rule of rules) {
-      for (const scopeStr of rule.scopes) {
-        allScopeEntries.push({ scope: scopeStr, ruleIndex: rule.index });
+      const scopes = rule.scopes;
+      for (let i = 0; i < scopes.length; i++) {
+        for (let j = 0; j < scopes.length; j++) {
+          if (i === j) continue;
+          if (isSuffixScope(scopes[i], scopes[j])) {
+            shadowedPairs.push({
+              type: 'intra',
+              general: scopes[j],
+              specific: scopes[i],
+              ruleIndex: rule.index,
+            });
+          }
+        }
       }
     }
 
-    // Compare every pair of scope strings from different rules
-    for (let i = 0; i < allScopeEntries.length; i++) {
-      for (let j = i + 1; j < allScopeEntries.length; j++) {
-        const a = allScopeEntries[i];
-        const b = allScopeEntries[j];
+    // --- (b) Inter-rule shadowing ---
+    const allEntries = [];
+    for (const rule of rules) {
+      for (const scope of rule.scopes) {
+        allEntries.push({ scope, ruleIndex: rule.index });
+      }
+    }
 
-        // Skip if same rule (though unlikely due to structure, but safe)
-        if (a.ruleIndex === b.ruleIndex) continue;
+    for (let i = 0; i < allEntries.length; i++) {
+      for (let j = i + 1; j < allEntries.length; j++) {
+        const a = allEntries[i];
+        const b = allEntries[j];
+
+        if (a.ruleIndex === b.ruleIndex) continue; // already handled above
 
         if (isSuffixScope(a.scope, b.scope)) {
           shadowedPairs.push({
+            type: 'inter',
             general: b.scope,
             specific: a.scope,
             generalRuleIndex: b.ruleIndex,
@@ -93,6 +105,7 @@ function main() {
           });
         } else if (isSuffixScope(b.scope, a.scope)) {
           shadowedPairs.push({
+            type: 'inter',
             general: a.scope,
             specific: b.scope,
             generalRuleIndex: a.ruleIndex,
@@ -106,7 +119,7 @@ function main() {
     let hasOutput = false;
 
     if (fullDuplicates.length > 0) {
-      console.log('🔴 Full Duplicates (shared exact scope string):\n');
+      console.log('🔴 Full Duplicates (same scope string in multiple rules):\n');
       fullDuplicates.forEach((dup, i) => {
         console.log(`Full Duplicate ${i + 1}:`);
         console.log(`  Scope: "${dup.scope}"`);
@@ -117,11 +130,19 @@ function main() {
     }
 
     if (shadowedPairs.length > 0) {
-      console.log('🟠 Shadowed Duplicates (one scope is more specific):\n');
+      console.log('🟠 Shadowed Scope Pairs:\n');
+
       shadowedPairs.forEach((pair, i) => {
-        console.log(`Shadowed Pair ${i + 1}:`);
-        console.log(`  General: "${pair.general}" (rule ${pair.generalRuleIndex})`);
-        console.log(`  Specific: "${pair.specific}" (rule ${pair.specificRuleIndex})`);
+        if (pair.type === 'intra') {
+          console.log(`Shadowed Pair ${i + 1} (within rule ${pair.ruleIndex}):`);
+          console.log(`  General: "${pair.general}"`);
+          console.log(`  Specific: "${pair.specific}"`);
+          console.log('  → The general scope is redundant inside the same rule.');
+        } else {
+          console.log(`Shadowed Pair ${i + 1} (across rules):`);
+          console.log(`  General: "${pair.general}" (rule ${pair.generalRuleIndex})`);
+          console.log(`  Specific: "${pair.specific}" (rule ${pair.specificRuleIndex})`);
+        }
         console.log('');
       });
       hasOutput = true;

@@ -1,4 +1,5 @@
 # source from shira: https://github.com/KraXen72/shira
+# code here won't probably work, as i just randomly pasted stuff for testing
 
 from __future__ import annotations
 
@@ -178,3 +179,33 @@ def get_1x1_cover(url: str, temp_location: Path, uniqueid: str, cover_format = "
 	output_bytes.seek(0)
 
 	return output_bytes.read()
+
+bracket_tuples =[["[", "]"], ["【", "】"], ["「", "」"], ["（", "）"]]
+title_banned_chars = ["♪"]
+
+# https://stackoverflow.com/a/49986645/13342359
+yeet_emoji = re.compile(pattern = "["
+	"\U0001F600-\U0001F64F"  # emoticons
+	"\U0001F300-\U0001F5FF"  # symbols & pictographs
+	"\U0001F680-\U0001F6FF"  # transport & map symbols
+	"\U0001F1E0-\U0001F1FF"  # flags (iOS)
+"]+", flags = re.UNICODE)
+
+def clean_title(title: str):
+	"""clean up youtube titles with regex and a lot of black magic"""
+
+	for char in title_banned_chars:
+		title = title.replace(char, "")
+	for lb, rb in bracket_tuples: 
+		lbe, rbe = re.escape(lb), re.escape(rb) # check for all matching variations of brackets
+		for m in re.finditer(rf"{lbe}([^{lbe}{rbe}]+){rbe}", title):
+			subs = "" # preserve info about a song cover or it's japanese title
+			if "cover" in m.group(0).lower() or re.match(r"^[一-龠]+|[ぁ-ゔ]+|[ァ-ヴー]+|[々〆〤ヶ]+|\s+$", m.group(1)) is not None:
+				subs = f"[{m.group(1)}]"
+			title = title.replace(m.group(0), subs)
+	
+	title = re.sub(yeet_emoji, "", title) # remove emoji
+	title = re.sub(r"\*\b[A-Z ]+\b\*", "", title) # remove stuff like *NOW ON ALL PLATFORMS*
+	title = re.sub(r"(\S)\[", r"\g<1>" + " [", title, flags=re.MULTILINE) # jap title whitespace fix
+	title = re.sub(r"\s{2,}", " ", title) # multiple spaces fix
+	return title.replace("_", "-").strip()

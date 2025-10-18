@@ -546,12 +546,6 @@
 			}
 		},
 		{
-			"scope": "string.regexp",
-			"settings": {
-				"foreground": "#D16969"
-			}
-		},
-		{
 			"scope": [
 				"support.type.vendored.property-name",
 				"variable.css",
