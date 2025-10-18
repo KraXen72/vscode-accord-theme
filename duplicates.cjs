@@ -8,7 +8,9 @@ const EXCLUDED_SHADOW_SUBSTRINGS = [
   'strong',
   'markup.underline',
   'markup.bold',
-  'markup.italic'
+  'markup.italic',
+	"support.type.property-name",
+	"meta.fstring.python constant.character"
 ];
 
 function normScopes(s) {
