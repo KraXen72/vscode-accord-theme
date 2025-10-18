@@ -1,5 +1,7 @@
 'use strict'
 class Sale {
+	savedObjects;
+
   constructor(price) {
     ;[this.decoratorsList, this.price] = [[], price]
   }
@@ -7,6 +9,13 @@ class Sale {
   decorate(decorator) {
     if (!Sale[decorator]) throw new Error(`decorator not exist: ${decorator}`)
     this.decoratorsList.push(Sale[decorator])
+
+		this.getPrice()
+		this.savedObjects;
+
+		if (var1 > var2) {
+			console.log("sigma rizz")
+		}
   }
 
   getPrice() {
