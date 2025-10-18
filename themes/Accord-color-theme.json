@@ -475,6 +475,12 @@
 			}
 		},
 		{
+			"scope": "markup.inline.raw",
+			"settings": {
+				"foreground": "#CE9178"
+			}
+		},
+		{
 			"scope": [
 				"punctuation.definition.heading.markdown",
 				"punctuation.definition.heading.mdx"
@@ -489,18 +495,8 @@
 				"foreground": "#6796E6"
 			}
 		},
-		{
-			"scope": "markup.inline.raw",
-			"settings": {
-				"foreground": "#CE9178"
-			}
-		},
-		{
-			"scope": "meta.preprocessor.string",
-			"settings": {
-				"foreground": "#CE9178"
-			}
-		},
+		
+		
 		{
 			"scope": "meta.preprocessor.numeric",
 			"settings": {
@@ -521,18 +517,6 @@
 			],
 			"settings": {
 				"foreground": "#569CD6"
-			}
-		},
-		{
-			"scope": "string.tag",
-			"settings": {
-				"foreground": "#CE9178"
-			}
-		},
-		{
-			"scope": "string.value",
-			"settings": {
-				"foreground": "#CE9178"
 			}
 		},
 		{
@@ -876,8 +860,10 @@
 				"support.constant.media",
 				"constant.other.color.rgb-value",
 				"constant.other.rgb-value",
-				"support.constant.color"
-				// "meta.property-value.css", // grid area names
+				"support.constant.color",
+				"meta.preprocessor.string",
+				"string.tag",
+				"string.value"
 			],
 			"settings": {
 				"foreground": "#CE9178"
