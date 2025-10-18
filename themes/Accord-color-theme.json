@@ -557,12 +557,6 @@
 			}
 		},
 		{
-			"scope": "keyword.other.unit",
-			"settings": {
-				"foreground": "#B5CEA8"
-			}
-		},
-		{
 			"scope": "support.function.git-rebase",
 			"settings": {
 				"foreground": "#9CDCFE"
@@ -963,12 +957,6 @@
 			],
 			"settings": {
 				"foreground": "#C6C5FE"
-			}
-		},
-		{
-			"scope": "keyword.other.unit",
-			"settings": {
-				"foreground": "#E9C062"
 			}
 		},
 		{
