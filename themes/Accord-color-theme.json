@@ -568,24 +568,16 @@
 				"foreground": "#B5CEA8"
 			}
 		},
-		// {
-		// 	"scope": [
-		// 		"meta.type.cast.expr",
-		// 		"meta.type.new.expr",
-		// 		"support.constant.math",
-		// 		"support.constant.dom",
-		// 		"support.constant.json",
-		// 	],
-		// 	"settings": {
-		// 		"foreground": "#4EC9B0"
-		// 	}
-		// },
 		{
 			"scope": [
-				"constant.other.color"
+				"meta.type.cast.expr",
+				"meta.type.new.expr",
+				"support.constant.math",
+				"support.constant.dom",
+				"support.constant.json",
 			],
 			"settings": {
-				"foreground": "#00FF00"
+				"foreground": "#4EC9B0"
 			}
 		},
 		{
@@ -648,19 +640,6 @@
 		},
 		{
 			"scope": [
-				"source.css support.type.property-name",
-				"source.sass support.type.property-name",
-				"source.scss support.type.property-name",
-				"source.less support.type.property-name",
-				"source.stylus support.type.property-name",
-				"source.postcss support.type.property-name"
-			],
-			"settings": {
-				"foreground": "#C6C5FE"
-			}
-		},
-		{
-			"scope": [
 				"entity.name.method.js"
 			],
 			"settings": {
@@ -712,15 +691,9 @@
 		},
 		{
 			"scope": [
-				"string.regexp"
-			],
-			"settings": {
-				"foreground": "#C6C5FE"
-			}
-		},
-		{
-			"scope": [
-				"constant.character.escape"
+				"string.regexp",
+				"constant.character.escape",
+				"constant.other.placeholder"
 			],
 			"settings": {
 				"foreground": "#C6C5FE"
@@ -874,14 +847,6 @@
 		},
 		{
 			"scope": [
-				"markup.raw.block.fenced.markdown"
-			],
-			"settings": {
-				"foreground": "#00000050"
-			}
-		},
-		{
-			"scope": [
 				"punctuation.definition.fenced.markdown"
 			],
 			"settings": {
@@ -891,19 +856,11 @@
 		{
 			"scope": [
 				"markup.raw.block.fenced.markdown",
-				"variable.language.fenced.markdown"
-			],
-			"settings": {
-				"foreground": "#FF00FF"
-			}
-		},
-		{
-			"scope": [
+				"variable.language.fenced.markdown",
 				"meta.separator"
 			],
 			"settings": {
-				"foreground": "#FF00FF",
-				"fontStyle": "bold"
+				"foreground": "#FF00FF"
 			}
 		},
 		{
@@ -981,15 +938,6 @@
 			],
 			"settings": {
 				"foreground": "#E9C062"
-			}
-		},
-		{
-			"scope": [
-				"constant.character.escape",
-				"constant.other.placeholder"
-			],
-			"settings": {
-				"foreground": "#FFFFFFC5"
 			}
 		},
 
