@@ -514,13 +514,6 @@
 				"foreground": "#6796E6"
 			}
 		},
-		
-		{
-			"scope": "meta.structure.dictionary.key.python",
-			"settings": {
-				"foreground": "#9CDCFE"
-			}
-		},
 		{
 			"scope": [
 				"storage",
@@ -531,13 +524,6 @@
 				"foreground": "#569CD6"
 			}
 		},
-		{
-			"scope": "support.function.git-rebase",
-			"settings": {
-				"foreground": "#9CDCFE"
-			}
-		},
-		
 		{
 			"scope": [
 				"invalid",
