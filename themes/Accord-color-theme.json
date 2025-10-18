@@ -551,6 +551,7 @@
 				"punctuation.section.class.end",
 				"meta.tag",
 				"punctuation.definition.tag",
+				"punctuation.definition.list_item",
 				"punctuation.separator",
 				"punctuation.definition.tag.html",
 				"punctuation.definition.tag.begin.html",
@@ -560,7 +561,7 @@
 				"keyword.other.substitution",
 				"punctuation.terminator",
 				"punctuation.definition.string",
-				"punctuation.section.block"
+				"punctuation.section.block",
 			],
 			"settings": {
 				"foreground": "#B5B3AA"
@@ -638,15 +639,7 @@
 				"fontStyle": "italic"
 			}
 		},
-		{
-			"scope": [
-				"text.html.markdown",
-				"punctuation.definition.list_item.markdown"
-			],
-			"settings": {
-				"foreground": "#B5B3AA"
-			}
-		},
+
 		{
 			"scope": [
 				"markup.bold",
