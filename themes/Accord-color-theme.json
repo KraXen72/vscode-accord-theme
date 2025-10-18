@@ -270,12 +270,6 @@
 			}
 		},
 		{
-			"scope": "variable.language",
-			"settings": {
-				"foreground": "#569CD6"
-			}
-		},
-		{
 			"scope": [
 				"variable.argument.css",
 				"variable.other.global",
@@ -522,13 +516,11 @@
 			}
 		},
 		{
-			"scope": "meta.diff.header",
-			"settings": {
-				"foreground": "#569CD6"
-			}
-		},
-		{
-			"scope": "storage",
+			"scope": [
+				"storage",
+				"variable.language",
+				"meta.diff.header"
+			],
 			"settings": {
 				"foreground": "#569CD6"
 			}
