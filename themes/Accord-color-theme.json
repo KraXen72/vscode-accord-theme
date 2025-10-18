@@ -201,7 +201,9 @@
 	},
 	"tokenColors": [
 		{
-			"scope": [ "source"],
+			"scope": [
+				"source"
+			],
 			"settings": {
 				"foreground": "#FFFFFFD3"
 			}
@@ -294,6 +296,24 @@
 		// 		"foreground": "#ffffb6"
 		// 	}
 		// },
+		{
+			"name": "css colors and similar",
+			"scope": [
+				"support.constant.property-value",
+				"support.constant.font-name",
+				"support.constant.media-type",
+				"support.constant.media",
+				"constant.other.color.rgb-value",
+				"constant.other.rgb-value",
+				"support.constant.color",
+				"meta.preprocessor.string",
+				"string.tag",
+				"string.value"
+			],
+			"settings": {
+				"foreground": "#CE9178"
+			}
+		},
 		{
 			"name": "primitive types",
 			"scope": [
@@ -435,11 +455,10 @@
 				"foreground": "#A8FF60"
 			}
 		},
-
 		// -----
 		{
 			"scope": [
-				"emphasis", 
+				"emphasis",
 				"markup.italic"
 			],
 			"settings": {
@@ -466,7 +485,7 @@
 		},
 		{
 			"scope": [
-				"markup.heading", 
+				"markup.heading",
 				"markdown.heading"
 			],
 			"settings": {
@@ -495,8 +514,6 @@
 				"foreground": "#6796E6"
 			}
 		},
-		
-		
 		{
 			"scope": "meta.preprocessor.numeric",
 			"settings": {
@@ -849,24 +866,6 @@
 			],
 			"settings": {
 				"foreground": "#E9C062"
-			}
-		},
-
-		{
-			"scope": [
-				"support.constant.property-value",
-				"support.constant.font-name",
-				"support.constant.media-type",
-				"support.constant.media",
-				"constant.other.color.rgb-value",
-				"constant.other.rgb-value",
-				"support.constant.color",
-				"meta.preprocessor.string",
-				"string.tag",
-				"string.value"
-			],
-			"settings": {
-				"foreground": "#CE9178"
 			}
 		},
 		{
