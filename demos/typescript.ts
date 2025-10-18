@@ -1,4 +1,5 @@
-// ts
+// ts - source from local-harper.
+// code probably doesen't work since i pasted a random chunk for testing
 // Application-specific types
 
 export enum IssueSeverity {
@@ -92,6 +93,9 @@ let initPromise: Promise<void> | null = null;
  * Rules that are disabled by default
  */
 const DEFAULT_DISABLED_RULES = ['AvoidCurses'];
+
+Math.random()
+JSON.parse("{}")
 
 /**
  * Initialize Harper.js linter with configuration from localStorage

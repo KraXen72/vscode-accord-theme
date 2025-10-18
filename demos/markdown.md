@@ -23,6 +23,8 @@ https://code.visualstudio.com/
 Heading 1
 ========
 
+we throwin in some _italics_ as well, homie
+
 Heading 2
 --------------
 
