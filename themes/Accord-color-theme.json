@@ -238,10 +238,17 @@
 			"scope": [
 				"keyword.operator.new",
 				"keyword.control.new",
+				"keyword.other.new",
 				"keyword.operator.expression",
 				"keyword.operator.cast",
 				"keyword.operator.sizeof",
 				"keyword.operator.logical.python",
+
+				// php's <?php ?> markers
+				"punctuation.section.embedded.begin.php",
+				"punctuation.section.embedded.begin.php source.php",
+				"punctuation.section.embedded.end.php",
+				"punctuation.section.embedded.end.php source.php",
 			],
 			"settings": {
 				"foreground": "#569CD6"
