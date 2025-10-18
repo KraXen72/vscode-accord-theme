@@ -421,6 +421,7 @@
 				"meta.object-literal.key",
 				"support.type.property-name",
 				"keyword.other.definition.ini",
+				"entity.name.tag.yaml",
 				"source.json support.type.property-name.json"
 			],
 			"settings": {
