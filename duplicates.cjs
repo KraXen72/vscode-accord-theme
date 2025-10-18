@@ -2,27 +2,36 @@ const fs = require('fs');
 const path = require('path');
 const { parse } = require('jsonc-parser');
 
-// === CONFIG: scopes containing these substrings are ignored in shadow detection
 const EXCLUDED_SHADOW_SUBSTRINGS = [
   'emphasis',
   'strong',
   'markup.underline',
   'markup.bold',
   'markup.italic',
-	"support.type.property-name",
-	"meta.fstring.python constant.character"
+  'support.type.property-name',
+  'meta.fstring.python constant.character'
 ];
 
 function normScopes(s) {
   return typeof s === 'string' ? [s] : Array.isArray(s) ? s : [];
 }
 
-function isSuffix(specific, general) {
-  return specific !== general && specific.endsWith(' ' + general);
-}
-
 function shouldSkipShadow(scope) {
   return EXCLUDED_SHADOW_SUBSTRINGS.some(sub => scope.includes(sub));
+}
+
+function normalizeForShadow(scope) {
+  if (/^[a-z][a-z0-9_.]*\.[a-z0-9_]+$/i.test(scope)) return scope;
+  const m = scope.match(/^source\.([a-z0-9_]+)(?:\s+(.*\s+))?([a-z][a-z0-9_.]*)$/i);
+  if (m) {
+    const lang = m[1], base = m[3];
+    if (!base.endsWith('.' + lang)) return `${base}.${lang}`;
+  }
+  return scope;
+}
+
+function isSuffix(a, b) {
+  return a !== b && a.endsWith(' ' + b);
 }
 
 function setsIntersect(a, b) {
@@ -39,7 +48,7 @@ function main() {
 
   const data = parse(fs.readFileSync(path.resolve(file), 'utf8'));
   if (!Array.isArray(data.tokenColors)) {
-    console.error('Missing or invalid tokenColors array');
+    console.error('Invalid tokenColors array');
     process.exit(1);
   }
 
@@ -47,53 +56,60 @@ function main() {
     i,
     name: r.name,
     scopes: normScopes(r.scope),
-    settings: r.settings || {}
+    settings: r.settings || {},
+    firstScope: normScopes(r.scope)[0] || ''
   }));
 
-  // === Full duplicates (exact scope in ≥2 rules)
+  // === Full duplicates
   const scopeMap = new Map();
   rules.forEach(r => r.scopes.forEach(s => {
     if (!scopeMap.has(s)) scopeMap.set(s, new Set());
     scopeMap.get(s).add(r.i);
   }));
-
   const fullDupes = [];
-  for (const [s, idxSet] of scopeMap) {
-    const idxs = [...idxSet];
-    if (idxs.length > 1) fullDupes.push({ s, idxs });
+  for (const [s, idxs] of scopeMap) {
+    const arr = [...idxs];
+    if (arr.length > 1) fullDupes.push({ s, arr });
   }
 
-  // === Shadowed scopes (suffix match, intra + inter)
+  // === Shadowed (with normalization)
   const shadows = [];
 
-  // Intra
+  const normEntries = [];
   rules.forEach(r => {
-    r.scopes.forEach(a => {
-      if (shouldSkipShadow(a)) return;
-      r.scopes.forEach(b => {
-        if (a !== b && isSuffix(a, b) && !shouldSkipShadow(b)) {
+    r.scopes.forEach(s => {
+      if (shouldSkipShadow(s)) return;
+      const norm = normalizeForShadow(s);
+      normEntries.push({ orig: s, norm, i: r.i });
+    });
+  });
+
+  // Intra-rule
+  rules.forEach(r => {
+    const filtered = r.scopes.filter(s => !shouldSkipShadow(s)).map(s => normalizeForShadow(s));
+    filtered.forEach((a, ia) => {
+      filtered.forEach((b, ib) => {
+        if (ia !== ib && isSuffix(a, b)) {
           shadows.push({ type: 'intra', general: b, specific: a, i: r.i });
         }
       });
     });
   });
 
-  // Inter
-  const entries = rules.flatMap(r => r.scopes.map(s => ({ s, i: r.i })));
-  for (let i = 0; i < entries.length; i++) {
-    for (let j = i + 1; j < entries.length; j++) {
-      const a = entries[i], b = entries[j];
+  // Inter-rule
+  for (let i = 0; i < normEntries.length; i++) {
+    for (let j = i + 1; j < normEntries.length; j++) {
+      const a = normEntries[i], b = normEntries[j];
       if (a.i === b.i) continue;
-      if (shouldSkipShadow(a.s) || shouldSkipShadow(b.s)) continue;
-      if (isSuffix(a.s, b.s)) {
-        shadows.push({ type: 'inter', general: b.s, specific: a.s, gi: b.i, si: a.i });
-      } else if (isSuffix(b.s, a.s)) {
-        shadows.push({ type: 'inter', general: a.s, specific: b.s, gi: a.i, si: b.i });
+      if (isSuffix(a.norm, b.norm)) {
+        shadows.push({ type: 'inter', general: b.norm, specific: a.norm, gi: b.i, si: a.i });
+      } else if (isSuffix(b.norm, a.norm)) {
+        shadows.push({ type: 'inter', general: a.norm, specific: b.norm, gi: a.i, si: b.i });
       }
     }
   }
 
-  // === Mergeable: unnamed, same settings, disjoint scopes
+  // === Mergeables
   const unnamed = rules.filter(r => r.name === undefined);
   const groups = new Map();
   unnamed.forEach(r => {
@@ -110,11 +126,7 @@ function main() {
     for (let i = 0; i < sets.length && disjoint; i++)
       for (let j = i + 1; j < sets.length && disjoint; j++)
         if (setsIntersect(sets[i], sets[j])) disjoint = false;
-    if (disjoint) mergeables.push({
-      settings: group[0].settings,
-      rules: group.map(r => r.i),
-      scopes: group.flatMap(r => r.scopes)
-    });
+    if (disjoint) mergeables.push(group);
   }
 
   // === Output
@@ -122,14 +134,13 @@ function main() {
 
   if (fullDupes.length) {
     console.log('🔴 Full duplicates:');
-    fullDupes.forEach(({ s, idxs }) =>
-      console.log(`  "${s}" in rules [${idxs.join(', ')}]`));
+    fullDupes.forEach(({ s, arr }) => console.log(`  "${s}" in [${arr.join(', ')}]`));
     out = true;
   }
 
   if (shadows.length) {
     console.log('\n🟠 Shadowed scopes:');
-    shadows.forEach((sh, i) => {
+    shadows.forEach(sh => {
       if (sh.type === 'intra') {
         console.log(`  [${sh.i}] "${sh.general}" ⊂ "${sh.specific}"`);
       } else {
@@ -141,13 +152,14 @@ function main() {
 
   if (mergeables.length) {
     console.log('\n🟢 Mergeable groups:');
-    mergeables.forEach((m, i) => {
-      console.log(`  Rules [${m.rules.join(', ')}] → ${m.scopes.length} scopes`);
+    mergeables.forEach(group => {
+      console.log(`  Rules [${group.map(r => r.i).join(', ')}]:`);
+      group.forEach(r => console.log(`    [${r.i}] "${r.firstScope}"`));
     });
     out = true;
   }
 
-  if (!out) console.log('✅ Clean: no issues found.');
+  if (!out) console.log('✅ Clean.');
 }
 
 main();
