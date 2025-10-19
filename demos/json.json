@@ -1,0 +1,55 @@
+{
+	"env": {
+		"es6": true,
+		"mocha": true,
+		"node": true
+	},
+	"extends": "eslint:recommended",
+	"rules": {
+		"indent": [
+			"error",
+			2
+		],
+		"linebreak-style": [
+			"error",
+			"unix"
+		],
+		"quotes": [
+			"error",
+			"single"
+		],
+		"semi": [
+			"error",
+			"always"
+		],
+		"name": "classes",
+		"scope": [
+			"support.class",
+			"support.class.dart",
+			"entity.name.type.class",
+			"entity.name.type.module",
+			"entity.other.inherited-class"
+		],
+		"settings": {
+			"foreground": "#FFFFB6",
+			"lets": {
+				"try": {
+					"adding": {
+						"some": {
+							"super": {
+								"deeply": {
+									"nested": {
+										"stuff": {
+											"answer": 42,
+											"cool": ["A", "B"]
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
