@@ -36,26 +36,46 @@
 	/* https://github.com/Automattic/harper/blob/8131d60e0a49bc8094a89456bbfc8fba9c253831/packages/web/src/lib/lintKindColor.ts */
 
 	/* Harper lint kind colors (RGB triplets for flexible usage) */
-	--lint-kind-agreement: 34 139 34; /* Forest green */
-	--lint-kind-boundary-error: 139 69 19; /* Saddle brown */
-	--lint-kind-capitalization: 150 56 156; /* purple, modified */
-	--lint-kind-eggcorn: 255 140 0; /* Dark orange */
-	--lint-kind-enhancement: 14 173 105; /* Green */
-	--lint-kind-formatting: 125 60 152; /* Amethyst purple */
-	--lint-kind-grammar: 155 89 182; /* Medium purple */
-	--lint-kind-malapropism: 199 21 133; /* Medium violet red */
-	--lint-kind-miscellaneous: 59 206 172; /* Turquoise */
-	--lint-kind-nonstandard: 0 139 139; /* Dark cyan */
-	--lint-kind-punctuation: 212 132 15; /* Dark orange */
-	--lint-kind-readability: 70 130 180; /* Steel blue */
-	--lint-kind-redundancy: 46 139 87; /* Sea green */
-	--lint-kind-regionalism: 192 97 203; /* Vibrant purple */
-	--lint-kind-repetition: 0 166 124; /* Green-cyan */
-	--lint-kind-spelling: 238 66 102; /* Pink-red */
-	--lint-kind-style: 255 210 63; /* Yellow */
-	--lint-kind-typo: 255 107 53; /* Vibrant orange-red */
-	--lint-kind-usage: 30 144 255; /* Dodger blue */
-	--lint-kind-word-choice: 34 139 34; /* Forest green */
+	--lint-kind-agreement: 34 139 34;
+	/* Forest green */
+	--lint-kind-boundary-error: 139 69 19;
+	/* Saddle brown */
+	--lint-kind-capitalization: 150 56 156;
+	/* purple, modified */
+	--lint-kind-eggcorn: 255 140 0;
+	/* Dark orange */
+	--lint-kind-enhancement: 14 173 105;
+	/* Green */
+	--lint-kind-formatting: 125 60 152;
+	/* Amethyst purple */
+	--lint-kind-grammar: 155 89 182;
+	/* Medium purple */
+	--lint-kind-malapropism: 199 21 133;
+	/* Medium violet red */
+	--lint-kind-miscellaneous: 59 206 172;
+	/* Turquoise */
+	--lint-kind-nonstandard: 0 139 139;
+	/* Dark cyan */
+	--lint-kind-punctuation: 212 132 15;
+	/* Dark orange */
+	--lint-kind-readability: 70 130 180;
+	/* Steel blue */
+	--lint-kind-redundancy: 46 139 87;
+	/* Sea green */
+	--lint-kind-regionalism: 192 97 203;
+	/* Vibrant purple */
+	--lint-kind-repetition: 0 166 124;
+	/* Green-cyan */
+	--lint-kind-spelling: 238 66 102;
+	/* Pink-red */
+	--lint-kind-style: 255 210 63;
+	/* Yellow */
+	--lint-kind-typo: 255 107 53;
+	/* Vibrant orange-red */
+	--lint-kind-usage: 30 144 255;
+	/* Dodger blue */
+	--lint-kind-word-choice: 34 139 34;
+	/* Forest green */
 }
 
 /* Dark mode with Flexoki colors */
@@ -143,6 +163,43 @@ body {
 	line-height: 2;
 }
 
+tp-yt-iron-dropdown:has(yt-list-view-model.ytListViewModelCollectionThumbnailClass) {
+	position: fixed;
+	top: 0 !important;
+	left: 0 !important;
+
+	margin-left: 2rem !important;
+	margin-top: 6rem !important;
+	height: calc(100% - 10rem);
+
+
+	#contentWrapper,
+	#contentWrapper > .ytSheetViewModelContextual {
+		height: 100%;
+		max-height: unset !important;
+	}
+
+	&::before {
+		content: "";
+		display: block;
+		position: absolute;
+
+		width: 100%;
+		height: 100%;
+		padding-inline: 7rem;
+		padding-block: 6rem 4rem;
+
+		transform: translate(-2rem, -6rem);
+		background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+		/*             border: 1px solid red; */
+	}
+
+	toggleable-list-item-view-model,
+	.ytListViewModelCollectionThumbnailClass {
+		max-width: 386px;
+	}
+}
+
 .cm-issue-tooltip-rule {
 	font-size: 11px;
 	padding: 2px 0px;
@@ -157,9 +214,15 @@ body {
 	grid-template-areas: "issues editor rulemanager";
 	max-height: calc(100vh - 3.5rem);
 }
-.sidebar-left { grid-area: issues }
-.editor-wrapper { grid-area: editor; }
-.sidebar-right { grid-area: rulemanager; }
+.sidebar-left {
+	grid-area: issues
+}
+.editor-wrapper {
+	grid-area: editor;
+}
+.sidebar-right {
+	grid-area: rulemanager;
+}
 
 .app-layout.rule-manager-open {
 	grid-template-columns: minmax(200px, 1fr) minmax(60ch, 2fr) minmax(200px, 1fr);
@@ -171,18 +234,18 @@ body {
 	.app-layout.rule-manager-open {
 		grid-template-columns: minmax(375px, 1fr) minmax(60ch, 2fr) 0;
 	}
-	.sidebar-right { 
+	.sidebar-right {
 		grid-area: issues;
 	}
-	
+
 	.sidebar-left.hidden-on-mobile {
 		display: none;
 	}
-	
+
 	.sidebar-right.visible-on-mobile {
 		display: block;
 	}
-	
+
 	.sidebar-right:not(.visible-on-mobile) {
 		display: none;
 	}
@@ -193,7 +256,7 @@ body {
 	.app-layout {
 		grid-template-columns: minmax(250px, 1fr) 1fr 0;
 	}
-	
+
 	.app-layout.rule-manager-open {
 		grid-template-columns: 0 1fr minmax(250px, 1fr);
 	}
