@@ -1,30 +1,28 @@
 # Accord
-> My theme for VSCode - KraXen72. It's not perfect but it's mine <3
+A familiar, robust & well-thought-out theme.
+
+![svelte with typescript](screenshots/svelte-ts.png)  
+
+## about
+- Based on VS Code's [Dark Modern](https://github.com/microsoft/vscode/blob/main/extensions/theme-defaults/themes/dark_modern.json) theme
+- [Base16 IR Black](https://base16.netlify.app/previews/base16-irblack) Syntax highlighting (extended)
+- Green Apple (#7CB342) accent color  
   
-[![Recurring donation via Liberapay](https://img.shields.io/badge/donate-liberapay-%23f6c915?logo=liberapay)](https://liberapay.com/KraXen72) [![One-time donation via ko-fi.com](https://img.shields.io/badge/donate-ko--fi-%23ff5e5b?logo=kofi)](https://ko-fi.com/kraxen72) 
-Any donations are highly appreciated! <3
-
-![typescript](screenshots/typescript.png)
-
-## about theme
-This theme aims to be familiar, space efficient & robust.
-- An assortment of grays for the backgrounds: dark-gray for side panels and a pleasing gray for main background.
-- The syntax highlighting colors are from [United Ubuntu](https://github.com/rdnlsmith/vscode-linux-themes), a theme i've been using for ages & really like. 
-- It has thin gray borders separating the screens & sharp corners, giving the theme a robust and stable feel
-
-I recommend you use the theme with the **Material Product Icons** extension - [repo](https://github.com/PKief/vscode-material-product-icons), [marketplace](https://marketplace.visualstudio.com/items?itemName=PKief.material-product-icons)
-
-It is based on the VSCode Dark, Dark+, Dark V2 Experimental and [United Ubuntu](https://github.com/rdnlsmith/vscode-linux-themes) themes. I added my fair bit of tweaks as well, mostly the apple green accent color. 
-
-## contributing
-I am aware that some keywords might not be properly highlighted, feel free to report these in the issues & i'll try to fix them.
+## support further development
+  
+[![Recurring donation via Liberapay](https://img.shields.io/badge/donate-liberapay-%23f6c915?logo=liberapay)](https://liberapay.com/KraXen72) [![One-time donation via ko-fi.com](https://img.shields.io/badge/donate-ko--fi-%23ff5e5b?logo=kofi)](https://ko-fi.com/kraxen72)   
+Any donations are highly appreciated!  
 
 ## more screenshots
-![python](screenshots/python.png)
-![css](screenshots/css.png)
-![json](screenshots/json.png)
-
----
+![python](screenshots/python-shira.png)  
+![css](screenshots/css.png)  
+  
+## contributing
+Please to report any issues with syntax higlighting
 
 ## credits
-- thanks to [night-owl-vscode-theme](https://github.com/sdras/night-owl-vscode-theme) for the `demos/`
+- thanks to [night-owl-vscode-theme](https://github.com/sdras/night-owl-vscode-theme) for the `demos/` (i edited them further afterwards)
+- thanks to [one-hunter-vscode](https://github.com/Railly/one-hunter-vscode) for syntax higlighting scope sets
+- thanks to VS Code's documentation: [Syntax Highlight Guide](https://code.visualstudio.com/api/language-extensions/syntax-highlight-guide)
+  
+I recommend you use the theme with the **Carbon Product Icons** (used in screenshots) - [repo](https://github.com/antfu/vscode-icons-carbon), [marketplace](https://marketplace.visualstudio.com/items?itemName=antfu.icons-carbon)

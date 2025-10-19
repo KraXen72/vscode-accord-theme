@@ -151,7 +151,10 @@
 		"keybindingLabel.foreground": "#ffffffc5",
 
 		// custom bracket colors from nord
-		"editorBracketHighlight.foreground1": "#abb2c0",
+		
+		// nord, but we'll rather use our punctuation color
+		// "editorBracketHighlight.foreground1": "#abb2c0", 
+		"editorBracketHighlight.foreground1": "#B5B3AA",
 		"editorBracketHighlight.foreground2": "#5caeef",
 		"editorBracketHighlight.foreground3": "#4fb1bc",
 		"editorBracketHighlight.foreground4": "#c172d9",
