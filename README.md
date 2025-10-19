@@ -15,7 +15,7 @@ Any donations are highly appreciated!
 
 ## more screenshots
 ![python](screenshots/python-shira.png)  
-![css](screenshots/css.png)  
+![css](screenshots/css2.png)  
   
 ## contributing
 Please to report any issues with syntax higlighting
