@@ -445,7 +445,11 @@
 		},
 		{
 			"name": "attributes",
-			"scope": "entity.other.attribute-name",
+			"scope": [
+				"entity.other.attribute-name",
+				"text.html.markdown meta.attribute",
+				"text.html.markdown meta.attribute invalid.deprecated",
+			],
 			"settings": {
 				"foreground": "#9CDCFE"
 			}
@@ -552,14 +556,14 @@
 				"foreground": "#FF6C60"
 			}
 		},
-		{
-			"scope": [
-				"invalid.deprecated"
-			],
-			"settings": {
-				"foreground": "#B18A3D"
-			}
-		},
+		// {
+		// 	"scope": [
+		// 		"invalid.deprecated"
+		// 	],
+		// 	"settings": {
+		// 		"foreground": "#B18A3D"
+		// 	}
+		// },
 		{
 			"scope": [
 				"punctuation",
@@ -724,24 +728,6 @@
 		// 		"foreground": "#4EC9B0"
 		// 	}
 		// },
-		{
-			"scope": [
-				"markup.raw.block.fenced.markdown",
-				"variable.language.fenced.markdown",
-				"meta.separator"
-			],
-			"settings": {
-				"foreground": "#FF00FF"
-			}
-		},
-		{
-			"scope": [
-				"markup.table"
-			],
-			"settings": {
-				"foreground": "#FF00FF"
-			}
-		},
 		{
 			"scope": "token.info-token",
 			"settings": {
