@@ -46,7 +46,7 @@ monkey = {
 
 def metadata_applier(tags: Tags, fixed_location: Path, exclude_tags: list[str], fallback_mv = True):
 	"""set fallback_mv = True until auxio supports proper multi-value m4a tags from mutagen"""
-	handle = MediaFile(fixekd_location)
+	handle = MediaFile(fixed_location)
 	handle.delete()
 	# print({**tags, "cover_bytes": ""})
 	for k, v in tags.items():

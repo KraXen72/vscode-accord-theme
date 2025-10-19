@@ -8,8 +8,9 @@ const EXCLUDED_SHADOW_SUBSTRINGS = [
   'markup.underline',
   'markup.bold',
   'markup.italic',
-  'support.type.property-name',
-  'meta.fstring.python constant.character'
+  'support.type.property-name', // css stuff
+  'meta.fstring.python constant.character', // python fstring punctuation
+	"markup.inline.raw punctuation" // markdown inline code
 ];
 
 function normScopes(s) {

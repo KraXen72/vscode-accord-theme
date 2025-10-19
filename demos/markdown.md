@@ -36,3 +36,20 @@ sigma rizz:
 ## `sub`/`sup` vs LaTeX
 - yeah mah
 - this is a list alright
+
+```md
+what if i put some code here
+
+	sigma rizz
+	yeah
+
+```
+
+```bash
+$ sudo dnf install xpadneo
+```
+
+	monkey?
+	fetch
+
+sigma rizz
