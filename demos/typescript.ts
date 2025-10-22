@@ -8,6 +8,8 @@ export enum IssueSeverity {
 	Info = 'info',
 }
 
+const response = await fetch(`/api/arrangements/${arrangementId}`);
+
 /**
  * Our application's issue type that wraps Harper's Lint with additional metadata
  */
