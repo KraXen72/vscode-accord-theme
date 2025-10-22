@@ -316,6 +316,8 @@
 			"name": "primitive types",
 			"scope": [
 				"support.type",
+				"support.type.primitive",
+				"meta.function.parameters.python meta.indexed-name.python"
 			],
 			"settings": {
 				"foreground": "#C6C5FE",
@@ -344,7 +346,8 @@
 				"storage.type.generic.groovy",
 				"storage.type.object.array.groovy",
 				"storage.type.primitive.array.groovy",
-				"storage.type.primitive.groovy"
+				"storage.type.primitive.groovy",
+				"meta.function.parameters.python" // unsure
 			],
 			"settings": {
 				"foreground": "#4EC9B0"
@@ -599,6 +602,7 @@
 				"keyword.other.substitution",
 			],
 			"settings": {
+				// "foreground": "#FFFFFFD3"
 				"foreground": "#B5B3AA"
 			}
 		},

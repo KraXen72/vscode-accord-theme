@@ -148,6 +148,33 @@ export async function initHarper(): Promise<void> {
 	return initPromise;
 }
 
+type SigmaRizz = {
+	name: string,
+	age: string,
+	sayName: () => void
+}
+
+
+class EditFishForm extends Component {
+	static propTypes = {
+		updateFish: PropTypes.func,
+		deleteFish: PropTypes.func,
+		index: PropTypes.string,
+		fish: PropTypes.shape({
+			image: PropTypes.string,
+			name: PropTypes.string.isRequired
+		})
+	}
+}
+
+function someFunction(
+	parameterClass: EditFishForm, 
+	parameterInterface: HarperIssue,
+	parameterType: SigmaRizz
+) {
+
+}
+
 /**
  * Get the linter instance (must call initHarper first)
  */
