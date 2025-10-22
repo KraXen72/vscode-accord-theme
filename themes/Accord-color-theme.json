@@ -212,10 +212,11 @@
 			"name": "parameters",
 			"scope": [
 				"variable.parameter",
-				"meta.parameter"
+				"meta.parameter",
+				// indexed python types like dict[str, str | int] -> dict
+				"meta.function.parameters.python meta.indexed-name.python"
 			],
 			"settings": {
-				// "foreground": "#E9C062"
 				"foreground": "#FFFFFFD3"
 			}
 		},
@@ -238,16 +239,6 @@
 				"foreground": "#FFFFFFD3"
 			}
 		},
-		{
-			"scope": [
-				"keyword.operator"
-			],
-			"settings": {
-				// "foreground": "#FFFFFFC5" // previously
-				// "foreground": "#B5B3AA" // same as brackets
-				"foreground": "#FFFFFFD3"
-			}
-		},
 		// {
 		// 	"name": "differentiate = and ==",
 		// 	"scope": [ "keyword.operator.assignment"  ],
@@ -266,12 +257,23 @@
 				"keyword.control.conditional",
 				"keyword.control.return",
 				"keyword.control.trycatch",
+				// "keyword.operator.expression.of",
 				"keyword.modifier",
 				"storage.modifier",
 				"storage.type",
 			],
 			"settings": {
 				"foreground": "#FF73FD"
+			}
+		},
+		{
+			"scope": [
+				"keyword.operator"
+			],
+			"settings": {
+				// "foreground": "#FFFFFFC5" // previously
+				// "foreground": "#B5B3AA" // same as brackets
+				"foreground": "#FFFFFFD3"
 			}
 		},
 		{
@@ -317,7 +319,6 @@
 			"scope": [
 				"support.type",
 				"support.type.primitive",
-				"meta.function.parameters.python meta.indexed-name.python"
 			],
 			"settings": {
 				"foreground": "#C6C5FE",
@@ -521,12 +522,12 @@
 				"foreground": "#000080"
 			}
 		},
-		{
-			"scope": "constant.regexp",
-			"settings": {
-				"foreground": "#646695"
-			}
-		},
+		// {
+		// 	"scope": "constant.regexp",
+		// 	"settings": {
+		// 		"foreground": "#646695"
+		// 	}
+		// },
 		{
 			"scope": [
 				"markup.heading",
@@ -603,7 +604,7 @@
 			],
 			"settings": {
 				// "foreground": "#FFFFFFD3"
-				"foreground": "#B5B3AA"
+				"foreground": "#b5b3aa" // base16IRBlack 05
 			}
 		},
 		{
@@ -646,10 +647,14 @@
 				"string.regexp",
 				"constant.character.escape",
 				"constant.character.set.regexp",
-				"constant.other.placeholder"
+				"constant.other.placeholder",
+				// brackets/braces in python regex
+				"string.regexp keyword.operator", // unsure
+				"constant.other.set.regexp", // unsure
 			],
 			"settings": {
 				"foreground": "#C6C5FE"
+				// "foreground": "#CE9178"
 			}
 		},
 		{
