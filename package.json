@@ -8,7 +8,7 @@
   "publisher": "KraXen72",
   "license": "GPL-3.0",
   "description": "Personal VSCode theme based on new Dark Modern and base16 IR Black",
-  "version": "2.2.1",
+  "version": "2.3.0",
   "engines": {
     "vscode": "^1.79.0"
   },
