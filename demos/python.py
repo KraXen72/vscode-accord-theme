@@ -16,6 +16,8 @@ from mediafile import ImageType, MediaFile
 from PIL import Image, ImageFilter, ImageOps
 from requests_cache import CachedSession
 
+import numpy as np
+
 AVG_THRESHOLD = 10
 CHANNEL_THRESHOLD = 15
 MV_SEPARATOR = "/"#" & " # TODO make this configurable
@@ -44,12 +46,23 @@ monkey = {
 	"age": 14
 }
 
+class Cluster(object):
+
+    def __init__(self, array=np.array([])):
+        self.changed = True
+        self.data = np.array(array)
+        self.cd = self.data
+
+	def some_method():
+		np.linalg.eig()
+
 def metadata_applier(tags: Tags, fixed_location: Path, exclude_tags: list[str], fallback_mv = True):
 	"""set fallback_mv = True until auxio supports proper multi-value m4a tags from mutagen"""
 	handle = MediaFile(fixed_location)
 	handle.delete()
 	# print({**tags, "cover_bytes": ""})
 	for k, v in tags.items():
+		
 		if k in exclude_tags or k in ["cover_url", "cover_bytes"]: 
 			continue
 		if k == "date":

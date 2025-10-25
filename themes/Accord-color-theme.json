@@ -214,7 +214,7 @@
 				"variable.parameter",
 				"meta.parameter",
 				// indexed python types like dict[str, str | int] -> dict
-				"meta.function.parameters.python meta.indexed-name.python"
+				"meta.indexed-name.python"
 			],
 			"settings": {
 				"foreground": "#FFFFFFD3"
@@ -225,14 +225,17 @@
 			"scope": [
 				"variable",
 				"meta.variable",
-				"variable.other.object.property",
-				"variable.other.object",
-				"variable.other.readwrite.alias",
-				"variable.other.property",
-				"variable.other.constant",
 				"meta.property",
 				"meta.property-value.css",
-				"variable.readonly"
+				"variable.other",
+				"variable.readonly",
+
+				// css/sass/less variables
+				// "variable.other.global",
+				// "variable.argument.css",
+				// "variable.css",
+				// "variable.scss",
+				// "variable.other.less"
 			],
 			"settings": {
 				// "foreground": "#FFFFFFC5"
@@ -250,20 +253,18 @@
 			"name": "keywords",
 			"scope": [
 				"keyword",
-				"keyword.control",
 				"keyword.other.directive.using",
-				"keyword.control.exception",
-				"keyword.control.flow",
-				"keyword.control.conditional",
-				"keyword.control.return",
-				"keyword.control.trycatch",
+				"keyword.control",
 				// "keyword.operator.expression.of",
 				"keyword.modifier",
 				"storage.modifier",
 				"storage.type",
+				// "storage.type.function",
 			],
 			"settings": {
-				"foreground": "#FF73FD"
+				// "foreground": "#FF73FD" // base16
+				"foreground": "#dd77db"  // base16 dimmed a bit
+				// "foreground": "#ce5d97" // flexoki ma
 			}
 		},
 		{
@@ -279,6 +280,8 @@
 		{
 			"name": "special keywords",
 			"scope": [
+				// "keyword.control.trycatch",
+				// "storage.type",
 				"keyword.operator.new",
 				"keyword.control.new",
 				"keyword.other.new",
@@ -294,9 +297,19 @@
 				"punctuation.section.embedded.end.php source.php",
 			],
 			"settings": {
-				"foreground": "#569CD6"
+				"foreground": "#569CD6" // base16
+				// "foreground": "#4385be" // flexoki bl
 			}
 		},
+		// {
+		// 	"scope": [
+		// 		"storage.type",
+		// 		"keyword.control.trycatch"
+		// 	],
+		// 	"settings": {
+		// 		"foreground": "#C6C5FE",
+		// 	}
+		// },
 		{
 			"name": "imports, ifs & similar",
 			"scope": [
@@ -312,6 +325,7 @@
 			],
 			"settings": {
 				"foreground": "#B5B3AA"
+				// "foreground": "#878580" // flexoki tx-2
 			}
 		},
 		{
@@ -321,7 +335,8 @@
 				"support.type.primitive",
 			],
 			"settings": {
-				"foreground": "#C6C5FE",
+				"foreground": "#C6C5FE", // base16
+				// "foreground": "#8b7ec8" // flexoki pu
 			}
 		},
 		{
@@ -330,7 +345,7 @@
 				"meta.return-type",
 				"entity.name.type",
 				"entity.name.class",
-				"storage.type.cs",
+				"meta.function",
 				"storage.type.generic.cs",
 				"storage.type.modifier.cs",
 				"storage.type.variable.cs",
@@ -348,10 +363,11 @@
 				"storage.type.object.array.groovy",
 				"storage.type.primitive.array.groovy",
 				"storage.type.primitive.groovy",
-				"meta.function.parameters.python" // unsure
+				// "meta.function.parameters.python" // unsure
 			],
 			"settings": {
 				"foreground": "#4EC9B0"
+				// "foreground": "#3aa99f" // flexoki cy
 			}
 		},
 		{
@@ -361,6 +377,8 @@
 			],
 			"settings": {
 				"foreground": "#FF6C60",
+				// "foreground": "#D7BA7D",
+				// "foreground": "#b18a3d",
 				"fontStyle": "italic"
 			}
 		},
@@ -374,19 +392,6 @@
 				"foreground": "#FF6C60"
 			}
 		},
-		// {
-		// 	"name": "css/scss/less variables",
-		// 	"scope": [
-		// 		"variable.other.global",
-		// 		"variable.argument.css",
-		// 		"variable.css",
-		// 		"variable.scss",
-		// 		"variable.other.less"
-		// 	],
-		// 	"settings": {
-		// 		"foreground": "#ffffb6"
-		// 	}
-		// },
 		{
 			"name": "css colors and similar",
 			"scope": [
@@ -516,12 +521,6 @@
 				"fontStyle": "bold"
 			}
 		},
-		{
-			"scope": "header",
-			"settings": {
-				"foreground": "#000080"
-			}
-		},
 		// {
 		// 	"scope": "constant.regexp",
 		// 	"settings": {
@@ -553,16 +552,16 @@
 				"foreground": "#6796E6"
 			}
 		},
-		{
-			"scope": [
-				"storage",
-				"variable.language",
-				"meta.diff.header"
-			],
-			"settings": {
-				"foreground": "#569CD6"
-			}
-		},
+		// {
+		// 	"scope": [
+		// 		"storage",
+		// 		"variable.language",
+		// 		"meta.diff.header"
+		// 	],
+		// 	"settings": {
+		// 		"foreground": "#569CD6"
+		// 	}
+		// },
 		{
 			"name": "invalid text",
 			"scope": [
@@ -786,6 +785,7 @@
 		{
 			"scope": [
 				"meta.selector",
+				// "meta.attribute",
 				"entity.name.tag.css",
 				"entity.other.attribute-name.class.css",
 				"entity.other.attribute-name.class.mixin.css",
