@@ -227,6 +227,7 @@
 				"meta.variable",
 				"meta.property",
 				"meta.property-value.css",
+				"meta.function-call support.class",
 				"variable.other",
 				"variable.readonly",
 
