@@ -226,10 +226,16 @@
 				"variable",
 				"meta.variable",
 				"meta.property",
-				"meta.property-value.css",
 				"meta.function-call support.class",
 				"variable.other",
 				"variable.readonly",
+
+				"source.css meta.function.variable",
+				"source.css meta.property-value"
+				"source.scss meta.function.variable",
+				"source.scss meta.property-value"
+				"source.less meta.function.variable",
+				"source.less meta.property-value"
 
 				// css/sass/less variables
 				// "variable.other.global",
