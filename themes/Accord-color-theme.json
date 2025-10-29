@@ -231,9 +231,9 @@
 				"variable.readonly",
 
 				"source.css meta.function.variable",
-				"source.css meta.property-value"
+				"source.css meta.property-value",
 				"source.scss meta.function.variable",
-				"source.scss meta.property-value"
+				"source.scss meta.property-value",
 				"source.less meta.function.variable",
 				"source.less meta.property-value"
 
@@ -249,6 +249,20 @@
 				"foreground": "#FFFFFFD3"
 			}
 		},
+		// {
+		// 	"name": "css variables",
+		// 	"scope": [
+		// 		"variable.css",
+		// 		"variable.scss",
+		// 		"variable.less",
+		// 		"variable.argument.css",
+		// 		"variable.argument.scss",
+		// 		"variable.argument.less"
+		// 	],
+		// 	"settings": {
+		// 		"foreground": "#4EC9B0",
+		// 	}
+		// },
 		// {
 		// 	"name": "differentiate = and ==",
 		// 	"scope": [ "keyword.operator.assignment"  ],
