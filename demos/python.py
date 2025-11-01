@@ -48,10 +48,10 @@ monkey = {
 
 class Cluster(object):
 
-    def __init__(self, array=np.array([])):
-        self.changed = True
-        self.data = np.array(array)
-        self.cd = self.data
+	def __init__(self, array=np.array([])):
+		self.changed = True
+		self.data = np.array(array)
+		self.cd = self.data
 
 	def some_method():
 		np.linalg.eig()

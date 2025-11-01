@@ -19,8 +19,12 @@
 		"inputValidation.infoBackground": "#48a4b2",
 		"inputValidation.warningBackground": "#ea7221",
 		"list.dropBackground": "#383b3d",
-		"scrollbarSlider.background": "#a0391664",
-		"scrollbarSlider.hoverBackground": "#802e1264",
+
+		"scrollbarSlider.background": "#802e1264",
+		"scrollbarSlider.hoverBackground": "#a0391664",
+		"scrollbarSlider.activeBackground": "#802e12a1",
+		// "scrollbarSlider.activeBackground": "#7CB34250",
+
 		"statusBar.focusBorder": "#ff000000",
 		"tab.inactiveForeground": "#cccccc",
 		
@@ -184,7 +188,6 @@
 		"panelTitle.activeBorder": "#7CB342",
 		"menu.selectionForeground": "#7CB342",
 		"menubar.selectionForeground": "#7CB342",
-		"scrollbarSlider.activeBackground": "#7CB34250",
 		"terminal.tab.activeBorder": "#7CB342",
 		"notebook.focusedCellBorder": "#7CB342",
 
@@ -229,6 +232,7 @@
 				"meta.function-call support.class",
 				"variable.other",
 				"variable.readonly",
+				"meta.function support.variable.property",
 
 				"source.css meta.function.variable",
 				"source.css meta.property-value",
@@ -397,7 +401,7 @@
 				"variable.language.special.self"
 			],
 			"settings": {
-				"foreground": "#FF6C60",
+				// "foreground": "#FF6C60",
 				// "foreground": "#D7BA7D",
 				// "foreground": "#b18a3d",
 				"fontStyle": "italic"
