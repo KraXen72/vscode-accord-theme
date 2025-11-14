@@ -21,6 +21,13 @@ class Sale {
 		}
 	}
 
+
+	/**
+	 * @param nodes the nodes in the graph
+	 * @param s the starting node
+	 * @param t the final node
+	 * @return true iff there is a path from the start node to the final node
+	 */
 	getPrice() {
 		for (let decorator of this.decoratorsList) {
 			this.price = decorator(this.price)

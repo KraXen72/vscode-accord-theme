@@ -279,6 +279,7 @@
 			"scope": [
 				"keyword",
 				"keyword.other.directive.using",
+				"keyword.other.documentation",
 				"keyword.control",
 				// "keyword.operator.expression.of",
 				"keyword.modifier",
@@ -924,7 +925,6 @@
 		},
 		{
 			"scope": [
-				"keyword.other.documentation",
 				"meta.separator.markdown",
 				"string.other.number.mdx",
 				"variable.ordered.list.mdx",
