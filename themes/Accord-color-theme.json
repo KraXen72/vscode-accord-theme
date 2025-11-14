@@ -507,6 +507,9 @@
 			"name": "comments",
 			"scope": [
 				"comment",
+				"keyword.other.documentation",
+				"storage.type.class.jsdoc",
+				"storage.type.class.jsdoc punctuation",
 				"punctuation.definition.comment",
 				"comment.documentation",
 				"comment.line.documentation",
