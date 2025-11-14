@@ -234,6 +234,7 @@
 				"variable.readonly",
 				"meta.function support.variable.property",
 				"meta.method.body storage.type.java",
+				"meta.method.body meta.function-call",
 				"meta.class.body storage.type.java",
 
 				"source.css meta.function.variable",
@@ -467,6 +468,7 @@
 				"foreground": "#FFFFB6"
 			}
 		},
+		//  edges.add(new Edge(1, 2)); (still broken in java)
 		{
 			"name": "functions, methods",
 			"scope": [
@@ -879,6 +881,7 @@
 				"variable.type.parameter",
 				"variable.parameter.type",
 				"meta.decorator",
+				"storage.type.annotation",
 				"punctuation.decorator",
 				"entity.name.function.decorator",
 				"tag.decorator.js entity.name.tag.js",
