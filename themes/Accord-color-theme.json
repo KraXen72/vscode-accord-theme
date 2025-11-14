@@ -233,6 +233,8 @@
 				"variable.other",
 				"variable.readonly",
 				"meta.function support.variable.property",
+				"meta.method.body storage.type.java",
+				"meta.class.body storage.type.java",
 
 				"source.css meta.function.variable",
 				"source.css meta.property-value",
@@ -274,6 +276,19 @@
 		// 		"foreground": "#569CD6",
 		// 	}
 		// },
+		{
+			"scope": [
+				"variable.language.this",
+				"variable.language.special.self"
+			],
+			"settings": {
+				// "foreground": "#FF6C60",
+				// "foreground": "#D7BA7D",
+				// "foreground": "#b18a3d",
+				"foreground": "#dd77db",  // base16 dimmed a bit
+				// "fontStyle": "italic"
+			}
+		},
 		{
 			"name": "keywords",
 			"scope": [
@@ -359,6 +374,7 @@
 			"scope": [
 				"support.type",
 				"support.type.primitive",
+				"storage.type.primitive"
 			],
 			"settings": {
 				"foreground": "#C6C5FE", // base16
@@ -375,13 +391,17 @@
 				"storage.type.generic.cs",
 				"storage.type.modifier.cs",
 				"storage.type.variable.cs",
-				"storage.type.annotation.java",
-				"storage.type.generic.java",
-				"storage.type.java",
-				"storage.type.object.array.java",
-				"storage.type.primitive.array.java",
-				"storage.type.primitive.java",
-				"storage.type.token.java",
+				// "storage.type.annotation.java",
+				"meta.definition storage.type.generic.java",
+				"meta.definition storage.type.java",
+				"meta.definition.variable storage.type.java",
+				"meta.method.identifier storage.type.java",
+				"meta.method.identifier storage.type.generic.java",
+
+				// "storage.type.object.array.java",
+				// "storage.type.primitive.array.java",
+				// "storage.type.primitive.java",
+				// "storage.type.token.java",
 				"storage.type.groovy",
 				"storage.type.annotation.groovy",
 				"storage.type.parameters.groovy",
@@ -394,18 +414,6 @@
 			"settings": {
 				"foreground": "#4EC9B0"
 				// "foreground": "#3aa99f" // flexoki cy
-			}
-		},
-		{
-			"scope": [
-				"variable.language.this",
-				"variable.language.special.self"
-			],
-			"settings": {
-				// "foreground": "#FF6C60",
-				// "foreground": "#D7BA7D",
-				// "foreground": "#b18a3d",
-				"fontStyle": "italic"
 			}
 		},
 		{

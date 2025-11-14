@@ -25,4 +25,8 @@ class Solution {
     public static boolean solve(Set<Node> nodes, Node s, Node t) {
         // TODO
     }
+
+	public static void solve2(boolean include, ArrayList<Node> list, int number) {
+        // TODO
+    }
 }
