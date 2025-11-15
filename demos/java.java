@@ -30,3 +30,44 @@ class Solution {
         // TODO
     }
 }
+
+class Edge {
+
+    int from, to;
+
+    public Edge(int from, int to) {
+        this.from = from;
+        this.to = to;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Edge edge = (Edge) o;
+        return from == edge.from && to == edge.to;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(from, to);
+    }
+}
+
+class Solution {
+
+    public static List<ArrayList<int>> makeAdjList(int n, Set<Edge> edges) {
+        
+    }
+
+    /**
+     * @param n the number of nodes
+     * @param m the number of edges
+     * @param edges the set of edges, with endpoints labelled between 1 and n inclusive.
+     * @return true iff there is a cycle in the graph
+     */
+    public static boolean isThereACycle(int n, int m, Set<Edge> edges) {
+        var stack = new ArrayDeque<Edge>();
+        
+    }
+}

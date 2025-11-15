@@ -123,4 +123,8 @@ public class ChapterReader extends ID3Reader {
         return chapters;
     }
 
+	public List<int> getChapters2() {
+        return chapters;
+    }
+
 }
