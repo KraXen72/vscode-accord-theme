@@ -232,6 +232,7 @@
 				"meta.function-call support.class",
 				"variable.other",
 				"variable.readonly",
+				"constant.other.caps.python",
 
 				"meta.function support.variable.property",
 				"meta.class.body storage.type.java",

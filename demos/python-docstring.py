@@ -1,3 +1,6 @@
+NO_DBUS_HELP = "Use notify-send fallback instead of D-Bus"
+
+@click.option("--no-dbus", is_flag=True, help=NO_DBUS_HELP)
 class Vehicle(object):
     '''
     The Vehicle object contains lots of vehicles
