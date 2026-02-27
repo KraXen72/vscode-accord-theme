@@ -534,10 +534,28 @@
 				"constant.other.symbol",
 				"meta.group.braces.curly constant.other.object.key.js string.unquoted.label.js",
 				"string.other.link",
+				"markup.inserted"
 				// "constant.other.key",
 			],
 			"settings": {
-				"foreground": "#A8FF60"
+				// https://hexcolorblender.vercel.app
+				// "foreground": "#ce9178", // dark modern
+				// "foreground": "#cc9877", // 2
+				// "foreground": "#ca9f75", // 3 
+				// "foreground": "#c7a674", // 4
+				// "foreground": "#c5ad72", // 5
+				// "foreground": "#c3b471", // 6
+				// "foreground": "#c0bb6f", // 7
+				// "foreground": "#bec26e", // 8
+				// "foreground": "#bbc86c", // 9
+				// "foreground": "#b9cf6b", // 10
+				// "foreground": "#b7d669", // 11
+				// "foreground": "#b4dd68", // 12
+				// "foreground": "#b2e466", // 13
+				// "foreground": "#b0eb65", // 14
+				"foreground": "#adf263", // 15
+				// "foreground": "#abf962", // 16
+				// "foreground": "#a8ff60" // accord
 			}
 		},
 		{
@@ -624,14 +642,6 @@
 			],
 			"settings": {
 				"foreground": "#CE9178"
-			}
-		},
-		{
-			"scope": [
-				"markup.inserted"
-			],
-			"settings": {
-				"foreground": "#A8FF60"
 			}
 		},
 		{

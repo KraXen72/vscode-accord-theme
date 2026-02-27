@@ -10,13 +10,12 @@ from pathlib import Path
 from statistics import mean, stdev
 from typing import NotRequired, TypedDict
 
+import numpy as np
 from dateutil import parser
 from mediafile import Image as MFImage
 from mediafile import ImageType, MediaFile
 from PIL import Image, ImageFilter, ImageOps
 from requests_cache import CachedSession
-
-import numpy as np
 
 AVG_THRESHOLD = 10
 CHANNEL_THRESHOLD = 15
