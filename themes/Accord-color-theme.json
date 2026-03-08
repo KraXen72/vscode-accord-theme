@@ -165,7 +165,7 @@
 		// "terminal.foreground": "#ff0000",
 
 		"editorWidget.background": "#1C1B1A",
-		"editorWidget.border": "#343331", // tooltip border etc
+		"editorWidget.border": "#7CB342", // tooltip border etc
 		
 		//no effect, don't hurt
 		"foreground": "#ffffffc5",
