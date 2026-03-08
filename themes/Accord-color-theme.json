@@ -3,6 +3,9 @@
 	"$schema": "vscode://schemas/color-theme",
 	"type": "dark",
 	"colors": {
+		// flexoki cyan dark: #24837b
+		// flexoki cyan light: #3aa99f
+
 		// stuff from United Ubuntu / DarkV2
 		"badge.foreground": "#ffffff",
 		"button.background": "#48b258",
@@ -14,7 +17,9 @@
 		"editorCursor.foreground": "#ea5421",
 		"editorGroupHeader.noTabsBackground": "#111111",
 		"editorIndentGuide.background1": "#404040",
-		"focusBorder": "#ff000000",
+		// "focusBorder": "#ff000000",
+		"focusBorder": "#42403e",
+
 		"inputValidation.errorBackground": "#ea2121",
 		"inputValidation.infoBackground": "#48a4b2",
 		"inputValidation.warningBackground": "#ea7221",
@@ -25,10 +30,8 @@
 		"scrollbarSlider.activeBackground": "#802e12a1",
 		// "scrollbarSlider.activeBackground": "#7CB34250",
 
-		"statusBar.focusBorder": "#ff000000",
-		"tab.inactiveForeground": "#cccccc",
+		"statusBar.focusBorder": "#ffffff00",
 		
-		// start custom
 		"dropdown.background": "#282828",
 		"editorHoverWidget.background": "#252526",
 		"editorSuggestWidget.background": "#252526",
@@ -52,12 +55,20 @@
 		// inputs
 		"checkbox.background": "#313131",
 		"checkbox.border": "#ffffff15",
-		"input.background": "#ffffff0f",
-		"input.border": "#ffffff17",
+
+		// "input.background": "#ffffff0f",
+		// "input.border": "#ffffff17",
+		// "input.foreground": "#ffffffc5",
+		// "input.placeholderForeground": "#ffffff79",
+
+		"input.background": "#1f1f1f",
 		"input.foreground": "#ffffffc5",
-		"input.placeholderForeground": "#ffffff79",
-		"inputOption.activeBackground": "#2489db82",
-		"inputOption.activeBorder": "#2488db",
+		"input.border": "#343331",
+		"inputOption.activeBorder": "#7CB342",
+		"input.placeholderForeground": "#878580",
+		"inputOption.activeBackground": "#282726",
+		"inputOption.activeForeground": "#ffffffc5",
+
 		// settings
 		"settings.dropdownBackground": "#313131",
 		"settings.dropdownBorder": "#ffffff17",
@@ -82,7 +93,7 @@
 		"quickInput.background": "#1f1f1f",
 		"quickInput.foreground": "#ffffffc5",
 
-		// dark sidebars - oh boi
+		// dark sidebars
 		"sideBar.background": "#181818",
 		"sideBarSectionHeader.background": "#181818",
 		"sideBar.foreground": "#ffffffc5",
@@ -90,7 +101,7 @@
 		"sideBarTitle.foreground": "#ffffffc5",
 		
 		"sideBar.border": "#ffffff15",
-		// "sideBarSectionHeader.border": "#ffffff15", // section header sidebar bottom border
+		// "sideBarSectionHeader.border": "#ffffff15",
 		
 		// dark statusbar
 		"statusBar.background": "#181818",
@@ -105,18 +116,25 @@
 		"statusBarItem.remoteBackground": "#6e768100", //#0078d4 -> #6e768166 or #6e768100
 		"statusBarItem.remoteForeground": "#ffffffda", // #ffffff -> #ffffffda
 
-		// -- dark + encased tabs --
-		"tab.activeBackground": "#1f1f1f",
-		// "tab.activeBorder": "#1f1f1f",
-
-		"tab.activeForeground": "#ffffffc5",
+		// tabs
 		"tab.border": "#ffffff15",
-		"tab.hoverBackground": "#1f1f1f",
+		"tab.activeBackground": "#1f1f1f",
+		"tab.activeForeground": "#ffffffc5",
+		"tab.hoverBackground": "#ffffff15",
+		"tab.unfocusedHoverBackground": "#ffffff15",
+
+		"tab.activeBorder": "#1f1f1f",
+		"tab.activeBorderTop": "#7CB342",
+
 		"tab.inactiveBackground": "#181818",
-		// "tab.inactiveForeground": "#ffffff80",
+		"tab.inactiveForeground": "#cccccc",
+
+		// tabs - inactive editor group
 		"tab.unfocusedActiveBorder": "#1f1f1f",
-		"tab.unfocusedHoverBackground": "#6e76811a",
-		// tabs + titlebar
+		"tab.unfocusedActiveBorderTop": "#ffffff80",
+		"tab.unfocusedActiveForeground": "#cccccc",
+
+		// titlebar
 		"titleBar.activeBackground": "#181818",
 		"titleBar.activeForeground": "#ffffffc5",
 		"titleBar.border": "#ffffff15",
@@ -128,9 +146,6 @@
 		"editorGroupHeader.tabsBorder": "#ffffff15",
 		"scrollbar.shadow": "#484f5833",
 
-		// dark dropdowns
-		// "menu.background": "#1f1f1f",
-
 		// dark notifications
 		"notificationCenterHeader.background": "#1f1f1f",
 		"notificationCenterHeader.foreground": "#ffffffc5",
@@ -138,14 +153,20 @@
 		"notifications.border": "#ffffff15",
 		"notifications.foreground": "#ffffffc5", 
 
+		// list
+		"list.activeSelectionForeground": "#7CB342",
+		"list.highlightForeground": "#7CB342",
+		"list.focusAndSelectionOutline": "#ffffff00",
+		"list.hoverBackground": "#ffffff15",
+		"list.inactiveSelectionBackground": "#ffffff15",
+
 		// dark terminal stuff?
 		"terminal.foreground": "#ffffffc5",
 		// "terminal.foreground": "#ff0000",
 
-		// no effect?asdfasdfdas
-		"editorWidget.background": "#1f1f1f",
-		// "errorForeground": "#f85149",
-		// "focusBorder": "#0078d4",
+		"editorWidget.background": "#1C1B1A",
+		"editorWidget.border": "#343331", // tooltip border etc
+		
 		//no effect, don't hurt
 		"foreground": "#ffffffc5",
 		"icon.foreground": "#ffffffc5",
@@ -154,9 +175,8 @@
 
 		"keybindingLabel.foreground": "#ffffffc5",
 
-		// custom bracket colors from nord
-		
-		// nord, but we'll rather use our punctuation color
+		// custom bracket colors
+		// from nord theme, but we'll rather use our punctuation color
 		// "editorBracketHighlight.foreground1": "#abb2c0", 
 		"editorBracketHighlight.foreground1": "#B5B3AA",
 		"editorBracketHighlight.foreground2": "#5caeef",
@@ -169,20 +189,13 @@
 		// green apple accent color #7CB342. complementary color is #427cb3, analogous is #42b353
 		// i always thought i hate green, well, yet, here were we are.
 		"activityBarBadge.background": "#7CB342",
-		"list.activeSelectionForeground": "#7CB342",
-		"list.inactiveSelectionForeground": "#7CB342",
-		"list.highlightForeground": "#7CB342",
+
 		"editorSuggestWidget.highlightForeground": "#7CB342",
 		"textLink.foreground": "#7CB342",
 		"progressBar.background": "#7CB342",
 		"pickerGroup.foreground": "#7CB342",
-		"tab.activeBorderTop": "#7CB342",
-		"tab.activeBorder": "#1F1F1F",
-		// "tab.activeBorderTop": "#7CB34200", // optional
-		"tab.unfocusedActiveBorderTop": "#7CB342",
 		"notificationLink.foreground": "#7CB342",
 		"editorWidget.resizeBorder": "#7CB342",
-		"editorWidget.border": "#7CB342",
 		"settings.modifiedItemIndicator": "#7CB342",
 		"settings.headerForeground": "#7CB342",
 		"panelTitle.activeBorder": "#7CB342",
