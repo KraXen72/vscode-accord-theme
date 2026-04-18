@@ -213,7 +213,80 @@
 		"diffEditor.removedLineBackground": "#ff000012",
 		"diffEditor.removedTextBackground": "#ff000012",
 	},
-	"semanticHighlighting": false,
+	"semanticHighlighting": true,
+	// Semantic token colors override TextMate scopes when a language server provides
+	// semantic token information (e.g. TypeScript, Python with Pylance, Rust-analyzer, etc.).
+	// The TextMate tokenColors below remain as fallback for languages without a semantic
+	// token provider, or for tokens that the provider does not emit.
+	//
+	// Color palette used here (same as TextMate rules below):
+	//   classes               → #FFFFB6  (soft yellow)
+	//   built-in/stdlib class → #C6C5FE  (lavender, e.g. str/int in Python)
+	//   types / interfaces
+	//     / structs / enums   → #4EC9B0  (teal / green)
+	//   functions / methods   → #96CBFE  (cornflower blue)
+	//   variables / params
+	//     / properties        → #FFFFFFD3 (near-white, default text)
+	//   namespaces / modules  → #B5B3AA  (gray, like import keywords)
+	//   enum members          → #E9C062  (gold / amber)
+	//   decorators            → #E9C062  (gold / amber)
+	"semanticTokenColors": {
+		// ── Classes ────────────────────────────────────────────────────────
+		// Identifiers that declare or reference a class type (Python, JS/TS,
+		// Java, C#, …).  Kept yellow to distinguish from structural types.
+		"class": "#FFFFB6",
+		// Built-in / standard-library classes (e.g. str, int, bool, list in
+		// Python; Array, Promise in TS) get the lavender primitive-type color
+		// so they read closer to type annotations than to user-defined classes.
+		// Pylance marks Python primitives as class.defaultLibrary.
+		"class.defaultLibrary": "#C6C5FE",
+
+		// ── Namespaces / modules ───────────────────────────────────────────
+		// Module/namespace identifiers (e.g. `np` in np.array, imported
+		// package names) use the same gray as import keywords so they don't
+		// compete visually with class names.
+		"namespace": "#FFFFFFD3",
+
+		// ── Structural / nominal types ─────────────────────────────────────
+		// Interfaces, structs, enums and generic type aliases all get the
+		// teal "type" color so they read as "shape definitions", not classes.
+		"interface": "#4EC9B0",
+		"struct":    "#4EC9B0",
+		"enum":      "#4EC9B0",
+		"type":      "#4EC9B0",
+		// Type parameters (T, K, V …) follow the same teal family.
+		"typeParameter": "#4EC9B0",
+
+		// ── Functions & methods ────────────────────────────────────────────
+		"function": "#96CBFE",
+		"method":   "#96CBFE",
+		// Macros (Rust, C/C++) use the same function blue.
+		"macro":    "#96CBFE",
+
+		// ── Variables & parameters ─────────────────────────────────────────
+		// Both mutable and readonly variables stay at the default text color;
+		// they are not highlighted specially beyond what the editor provides.
+		"variable":          "#FFFFFFD3",
+		"variable.readonly": "#FFFFFFD3",
+		"parameter":         "#FFFFFFD3",
+
+		// ── Properties ────────────────────────────────────────────────────
+		// Class instance properties / member fields use the same near-white
+		// as regular variables so they don't stand out from normal identifiers.
+		// (e.g. `query`, `searchResults` in Angular components, `self.x` in Python)
+		"property":          "#FFFFFFD3",
+		"property.readonly": "#FFFFFFD3",
+
+		// ── Enum members ──────────────────────────────────────────────────
+		// Enum variants / constants use gold, consistent with the constants
+		// rule in tokenColors below.
+		"enumMember": "#E9C062",
+
+		// ── Decorators / annotations ──────────────────────────────────────
+		// @decorators (Python, TS) and Java annotations share the gold color
+		// used by the decorator TextMate rule below.
+		"decorator": "#E9C062"
+	},
 	"tokenColors": [
 		{
 			"scope": [
@@ -390,11 +463,13 @@
 		},
 		{
 			"name": "complex types",
+			// Fallback for languages without a semantic token provider.
+			// Note: entity.name.class was moved to the "classes" rule below
+			// so the TextMate fallback is consistent with the semantic rule
+			// (classes → yellow, not teal).
 			"scope": [
 				"meta.return-type",
 				"entity.name.type",
-				"entity.name.class",
-				"meta.function",
 				"storage.type.generic.cs",
 				"storage.type.modifier.cs",
 				"storage.type.variable.cs",
@@ -454,6 +529,8 @@
 		},
 		{
 			"name": "OOP lang features",
+			// Fallback for enum/struct/interface when no semantic tokens are
+			// available.  Mirrors the semanticTokenColors entries above.
 			"scope": [
 				"entity.name.type.enum",
 				"entity.name.type.struct",
@@ -465,9 +542,13 @@
 		},
 		{
 			"name": "classes",
+			// Fallback for class tokens when no semantic tokens are available.
+			// entity.name.class is included here (moved from "complex types")
+			// so both TextMate and semantic paths agree: classes are yellow.
 			"scope": [
 				"support.class",
 				"entity.name.type.class",
+				"entity.name.class",
 				"entity.name.type.module",
 				"entity.other.inherited-class"
 			],
