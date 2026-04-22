@@ -5,7 +5,6 @@
 	"colors": {
 		// flexoki cyan dark: #24837b
 		// flexoki cyan light: #3aa99f
-
 		// stuff from United Ubuntu / DarkV2
 		"badge.foreground": "#ffffff",
 		"button.background": "#48b258",
@@ -19,19 +18,15 @@
 		"editorIndentGuide.background1": "#404040",
 		// "focusBorder": "#ff000000",
 		"focusBorder": "#42403e",
-
 		"inputValidation.errorBackground": "#ea2121",
 		"inputValidation.infoBackground": "#48a4b2",
 		"inputValidation.warningBackground": "#ea7221",
 		"list.dropBackground": "#383b3d",
-
 		"scrollbarSlider.background": "#802e1264",
 		"scrollbarSlider.hoverBackground": "#a0391664",
 		"scrollbarSlider.activeBackground": "#802e12a1",
 		// "scrollbarSlider.activeBackground": "#7CB34250",
-
 		"statusBar.focusBorder": "#ffffff00",
-		
 		"dropdown.background": "#282828",
 		"editorHoverWidget.background": "#252526",
 		"editorSuggestWidget.background": "#252526",
@@ -40,7 +35,6 @@
 		"editor.findMatchHighlightBackground": "#b485274f",
 		"editor.selectionHighlightBackground": "#a5756233",
 		"editorGutter.addedBackground": "#587e31",
-
 		// cherry-picked stuff from dark v2
 		// leftmost sidebar - activityBar
 		"activityBar.background": "#181818",
@@ -55,12 +49,10 @@
 		// inputs
 		"checkbox.background": "#313131",
 		"checkbox.border": "#ffffff15",
-
 		// "input.background": "#ffffff0f",
 		// "input.border": "#ffffff17",
 		// "input.foreground": "#ffffffc5",
 		// "input.placeholderForeground": "#ffffff79",
-
 		"input.background": "#1f1f1f",
 		"input.foreground": "#ffffffc5",
 		"input.border": "#343331",
@@ -68,7 +60,6 @@
 		"input.placeholderForeground": "#878580",
 		"inputOption.activeBackground": "#282726",
 		"inputOption.activeForeground": "#ffffffc5",
-
 		// settings
 		"settings.dropdownBackground": "#313131",
 		"settings.dropdownBorder": "#ffffff17",
@@ -80,29 +71,24 @@
 		"peekViewEditor.matchHighlightBackground": "#bb800966",
 		"peekViewResult.background": "#1f1f1f",
 		"peekViewResult.matchHighlightBackground": "#bb800966",
-
 		// dark panels (bottom)
 		// "panel.background": "#181818",
 		// "panel.border": "#ffffff15",
 		// "panelInput.border": "#ffffff15",
 		// "panelTitle.activeForeground": "#ffffffc5",
 		// "panelTitle.inactiveForeground": "#8b949e",
-
 		// dark quick picker
 		"pickerGroup.border": "#ffffff15",
 		"quickInput.background": "#1f1f1f",
 		"quickInput.foreground": "#ffffffc5",
-
 		// dark sidebars
 		"sideBar.background": "#181818",
 		"sideBarSectionHeader.background": "#181818",
 		"sideBar.foreground": "#ffffffc5",
 		"sideBarSectionHeader.foreground": "#ffffffc5",
 		"sideBarTitle.foreground": "#ffffffc5",
-		
 		"sideBar.border": "#ffffff15",
 		// "sideBarSectionHeader.border": "#ffffff15",
-		
 		// dark statusbar
 		"statusBar.background": "#181818",
 		"statusBar.border": "#ffffff15",
@@ -115,66 +101,54 @@
 		"statusBarItem.prominentBackground": "#6e768166",
 		"statusBarItem.remoteBackground": "#6e768100", //#0078d4 -> #6e768166 or #6e768100
 		"statusBarItem.remoteForeground": "#ffffffda", // #ffffff -> #ffffffda
-
 		// tabs
 		"tab.border": "#ffffff15",
 		"tab.activeBackground": "#1f1f1f",
 		"tab.activeForeground": "#ffffffc5",
 		"tab.hoverBackground": "#ffffff15",
 		"tab.unfocusedHoverBackground": "#ffffff15",
-
 		"tab.activeBorder": "#1f1f1f",
 		"tab.activeBorderTop": "#7CB342",
-
 		"tab.inactiveBackground": "#181818",
 		"tab.inactiveForeground": "#cccccc",
-
 		// tabs - inactive editor group
 		"tab.unfocusedActiveBorder": "#1f1f1f",
 		"tab.unfocusedActiveBorderTop": "#ffffff80",
 		"tab.unfocusedActiveForeground": "#cccccc",
-
 		// titlebar
 		"titleBar.activeBackground": "#181818",
 		"titleBar.activeForeground": "#ffffffc5",
 		"titleBar.border": "#ffffff15",
 		"titleBar.inactiveBackground": "#1f1f1f",
-		"titleBar.inactiveForeground": "#8b949e", 
+		"titleBar.inactiveForeground": "#8b949e",
 		// titlebar related stuff too
 		"editorGroup.border": "#ffffff17",
 		"editorGroupHeader.tabsBackground": "#181818",
 		"editorGroupHeader.tabsBorder": "#ffffff15",
 		"scrollbar.shadow": "#484f5833",
-
 		// dark notifications
 		"notificationCenterHeader.background": "#1f1f1f",
 		"notificationCenterHeader.foreground": "#ffffffc5",
 		"notifications.background": "#1f1f1f",
 		"notifications.border": "#ffffff15",
-		"notifications.foreground": "#ffffffc5", 
-
+		"notifications.foreground": "#ffffffc5",
 		// list
 		"list.activeSelectionForeground": "#7CB342",
 		"list.highlightForeground": "#7CB342",
 		"list.focusAndSelectionOutline": "#ffffff00",
 		"list.hoverBackground": "#ffffff15",
 		"list.inactiveSelectionBackground": "#ffffff15",
-
 		// dark terminal stuff?
 		"terminal.foreground": "#ffffffc5",
 		// "terminal.foreground": "#ff0000",
-
 		"editorWidget.background": "#1C1B1A",
 		"editorWidget.border": "#7CB342", // tooltip border etc
-		
 		//no effect, don't hurt
 		"foreground": "#ffffffc5",
 		"icon.foreground": "#ffffffc5",
 		"editor.background": "#1f1f1f",
 		"editor.foreground": "#ffffffd3",
-
 		"keybindingLabel.foreground": "#ffffffc5",
-
 		// custom bracket colors
 		// from nord theme, but we'll rather use our punctuation color
 		// "editorBracketHighlight.foreground1": "#abb2c0", 
@@ -185,11 +159,9 @@
 		"editorBracketHighlight.foreground5": "#97c26c",
 		"editorBracketHighlight.foreground6": "#dfb976",
 		"editorBracketHighlight.unexpectedBracket.foreground": "#db6165",
-
 		// green apple accent color #7CB342. complementary color is #427cb3, analogous is #42b353
 		// i always thought i hate green, well, yet, here were we are.
 		"activityBarBadge.background": "#7CB342",
-
 		"editorSuggestWidget.highlightForeground": "#7CB342",
 		"textLink.foreground": "#7CB342",
 		"progressBar.background": "#7CB342",
@@ -203,140 +175,94 @@
 		"menubar.selectionForeground": "#7CB342",
 		"terminal.tab.activeBorder": "#7CB342",
 		"notebook.focusedCellBorder": "#7CB342",
-
 		"breadcrumb.foreground": "#ffffff70",
 		"breadcrumb.activeSelectionForeground": "#7CB342",
-
 		// faint diff colors
 		"diffEditor.insertedLineBackground": "#7cb3420F",
 		"diffEditor.insertedTextBackground": "#7cb3420F",
 		"diffEditor.removedLineBackground": "#ff000012",
 		"diffEditor.removedTextBackground": "#ff000012",
 	},
-	"semanticHighlighting": true,
 	// Semantic token colors override TextMate scopes when a language server provides
 	// semantic token information (e.g. TypeScript, Python with Pylance, Rust-analyzer, etc.).
 	// The TextMate tokenColors below remain as fallback for languages without a semantic
 	// token provider, or for tokens that the provider does not emit.
-	//
-	// Color palette used here (same as TextMate rules below):
-	//   classes               → #FFFFB6  (soft yellow)
-	//   built-in/stdlib class → #C6C5FE  (lavender, e.g. str/int in Python)
-	//   types / interfaces
-	//     / structs / enums   → #4EC9B0  (teal / green)
-	//   functions / methods   → #96CBFE  (cornflower blue)
-	//   variables / params
-	//     / properties        → #FFFFFFD3 (near-white, default text)
-	//   namespaces / modules  → #B5B3AA  (gray, like import keywords)
-	//   enum members          → #E9C062  (gold / amber)
-	//   decorators            → #E9C062  (gold / amber)
-	"semanticTokenColors": {
-		// ── Classes ────────────────────────────────────────────────────────
-		// Identifiers that declare or reference a class type (Python, JS/TS,
-		// Java, C#, …).  Kept yellow to distinguish from structural types.
-		"class": "#FFFFB6",
-		// Built-in / standard-library classes (e.g. str, int, bool, list in
-		// Python; Array, Promise in TS) get the lavender primitive-type color
-		// so they read closer to type annotations than to user-defined classes.
-		// Pylance marks Python primitives as class.defaultLibrary.
-		"class.defaultLibrary": "#C6C5FE",
-
-		// ── Namespaces / modules ───────────────────────────────────────────
-		// Module/namespace identifiers (e.g. `np` in np.array, imported
-		// package names) use the same gray as import keywords so they don't
-		// compete visually with class names.
-		"namespace": "#FFFFFFD3",
-
-		// ── Structural / nominal types ─────────────────────────────────────
-		// Interfaces, structs, enums and generic type aliases all get the
-		// teal "type" color so they read as "shape definitions", not classes.
-		"interface": "#4EC9B0",
-		"struct":    "#4EC9B0",
-		"enum":      "#4EC9B0",
-		"type":      "#4EC9B0",
-		// Type parameters (T, K, V …) follow the same teal family.
-		"typeParameter": "#4EC9B0",
-
-		// ── Functions & methods ────────────────────────────────────────────
-		"function": "#96CBFE",
-		"method":   "#96CBFE",
-		// Macros (Rust, C/C++) use the same function blue.
-		"macro":    "#96CBFE",
-
-		// ── Variables & parameters ─────────────────────────────────────────
-		// Both mutable and readonly variables stay at the default text color;
-		// they are not highlighted specially beyond what the editor provides.
-		"variable":          "#FFFFFFD3",
-		"variable.readonly": "#FFFFFFD3",
-		"parameter":         "#FFFFFFD3",
-
-		// ── Properties ────────────────────────────────────────────────────
-		// Class instance properties / member fields use the same near-white
-		// as regular variables so they don't stand out from normal identifiers.
-		// (e.g. `query`, `searchResults` in Angular components, `self.x` in Python)
-		"property":          "#FFFFFFD3",
-		"property.readonly": "#FFFFFFD3",
-
-		// ── Enum members ──────────────────────────────────────────────────
-		// Enum variants / constants use gold, consistent with the constants
-		// rule in tokenColors below.
-		"enumMember": "#E9C062",
-
-		// ── Decorators / annotations ──────────────────────────────────────
-		// @decorators (Python, TS) and Java annotations share the gold color
-		// used by the decorator TextMate rule below.
-		"decorator": "#E9C062"
-	},
+	// for now, i'm disabling it; i just don't like it man
+	"semanticHighlighting": false,
+	// "semanticTokenColors": {
+	// 	// classes
+	// 	// Identifiers that declare or reference a class type (Python, JS/TS, Java, C#, ...) -> Kept yellow to distinguish from structural types.
+	// 	"class": "#FFFFB6",
+	// 	// primitive types / built-in / standard-library classes (e.g. str, int, bool, list in
+	// 	// Python; Array, Promise in TS)
+	// 	"class.defaultLibrary": "#C6C5FE",
+	// 	// ── Namespaces / modules ───────────────────────────────────────────
+	// 	// Module/namespace identifiers (e.g. `np` in np.array, imported
+	// 	// package names) use the same gray as import keywords so they don't
+	// 	// compete visually with class names.
+	// 	"namespace": "#FFFFFFD3",
+	// 	// ── Structural / nominal types ─────────────────────────────────────
+	// 	// Interfaces, structs, enums and generic type aliases all get the
+	// 	// teal "type" color so they read as "shape definitions", not classes.
+	// 	"interface": "#4EC9B0",
+	// 	"struct":    "#4EC9B0",
+	// 	"enum":      "#4EC9B0",
+	// 	"enumMember": "#4EC9B0",
+	// 	"type":      "#4EC9B0",
+	// 	// Type parameters (T, K, V …) follow the same teal family.
+	// 	"typeParameter": "#4EC9B0",
+	// 	// ── Functions & methods ────────────────────────────────────────────
+	// 	"function": "#96CBFE",
+	// 	"method":   "#96CBFE",
+	// 	// Macros (Rust, C/C++) use the same function blue.
+	// 	"macro":    "#96CBFE",
+	// 	// ── Variables & parameters ─────────────────────────────────────────
+	// 	// Both mutable and readonly variables stay at the default text color;
+	// 	// they are not highlighted specially beyond what the editor provides.
+	// 	"variable":          "#FFFFFFD3",
+	// 	"variable.readonly": "#FFFFFFD3",
+	// 	"parameter":         "#FFFFFFD3",
+	// 	// ── Properties ────────────────────────────────────────────────────
+	// 	// Class instance properties / member fields use the same near-white
+	// 	// as regular variables so they don't stand out from normal identifiers.
+	// 	// (e.g. `query`, `searchResults` in Angular components, `self.x` in Python)
+	// 	"property":          "#FFFFFFD3",
+	// 	"property.readonly": "#FFFFFFD3",
+	// 	"decorator": "#C6C5FE",
+	// 	"selfParameter": "#dd77db",
+	// 	"comment": "#8BBD92"
+	// },
 	"tokenColors": [
 		{
 			"scope": [
 				"source"
 			],
 			"settings": {
-				// "foreground": "#FFFFFFD3"
 				"foreground": "#FFFFFFD3"
 			}
 		},
 		{
-			"name": "parameters",
-			"scope": [
-				"variable.parameter",
-				"meta.parameter",
-				// indexed python types like dict[str, str | int] -> dict
-				"meta.indexed-name.python"
-			],
-			"settings": {
-				"foreground": "#FFFFFFD3"
-			}
-		},
-		{
-			"name": "variables",
+			"name": "variables & parameters",
 			"scope": [
 				"variable",
 				"meta.variable",
 				"meta.property",
 				"meta.function-call support.class",
-				"variable.other",
-				"variable.readonly",
 				"constant.other.caps.python",
-
 				"meta.function support.variable.property",
 				"meta.class.body storage.type.java",
 				"meta.method.body meta.function-call",
-
 				"source.css meta.function.variable",
 				"source.css meta.property-value",
 				"source.scss meta.function.variable",
 				"source.scss meta.property-value",
 				"source.less meta.function.variable",
-				"source.less meta.property-value"
-
-				// css/sass/less variables
-				// "variable.other.global",
-				// "variable.argument.css",
-				// "variable.css",
-				// "variable.scss",
-				// "variable.other.less"
+				"source.less meta.property-value",
+				// parameters:
+				"variable.parameter",
+				"meta.parameter",
+				// indexed python types like dict[str, str | int] -> dict
+				"meta.indexed-name.python"
 			],
 			"settings": {
 				// "foreground": "#FFFFFFC5"
@@ -373,7 +299,7 @@
 				// "foreground": "#FF6C60",
 				// "foreground": "#D7BA7D",
 				// "foreground": "#b18a3d",
-				"foreground": "#dd77db",  // base16 dimmed a bit
+				"foreground": "#dd77db", // base16 dimmed a bit
 				// "fontStyle": "italic"
 			}
 		},
@@ -392,7 +318,7 @@
 			],
 			"settings": {
 				// "foreground": "#FF73FD" // base16
-				"foreground": "#dd77db"  // base16 dimmed a bit
+				"foreground": "#dd77db" // base16 dimmed a bit
 				// "foreground": "#ce5d97" // flexoki ma
 			}
 		},
@@ -418,7 +344,6 @@
 				"keyword.operator.cast",
 				"keyword.operator.sizeof",
 				"keyword.operator.logical.python",
-
 				// php's <?php ?> markers
 				"punctuation.section.embedded.begin.php",
 				"punctuation.section.embedded.begin.php source.php",
@@ -450,11 +375,38 @@
 			}
 		},
 		{
-			"name": "primitive types",
+			"name": "primitive types, decorators & regex",
+			// Also covers CSS/Sass/Less/etc. property names (support.type.property-name per language).
 			"scope": [
 				"support.type",
-				"support.type.primitive",
 				"storage.type.primitive",
+				// decorators / annotations
+				// "foreground": "#E9C062"
+				// "foreground": "#b5b3aa"
+				"variable.type.parameter",
+				"variable.parameter.type",
+				"meta.decorator",
+				"storage.type.annotation",
+				"punctuation.decorator",
+				"entity.name.function.decorator",
+				"tag.decorator.js entity.name.tag.js",
+				"tag.decorator.js punctuation.definition.tag.js",
+				// regex
+				"string.regexp",
+				"constant.character.escape",
+				"constant.character.set.regexp",
+				"constant.other.placeholder",
+				// brackets/braces in python regex
+				"string.regexp keyword.operator", // unsure
+				"constant.other.set.regexp", // unsure
+				"entity.name.tag.named.group.regexp",
+				// css/sass/less/stylus/postcss property names
+				"source.css support.type.property-name",
+				"source.sass support.type.property-name",
+				"source.scss support.type.property-name",
+				"source.less support.type.property-name",
+				"source.stylus support.type.property-name",
+				"source.postcss support.type.property-name",
 			],
 			"settings": {
 				"foreground": "#C6C5FE", // base16
@@ -473,7 +425,6 @@
 				"storage.type.generic.cs",
 				"storage.type.modifier.cs",
 				"storage.type.variable.cs",
-				
 				"meta.definition storage.type.java",
 				"meta.definition storage.type.generic.java",
 				"meta.definition.variable storage.type.java",
@@ -482,7 +433,6 @@
 				"meta.method.body storage.type.generic.java",
 				"meta.method.return-type storage.type.java",
 				"meta.method.return-type storage.type.generic.java",
-				
 				// untested, idk what groovy is
 				"storage.type.groovy",
 				"storage.type.annotation.groovy",
@@ -491,7 +441,6 @@
 				"storage.type.object.array.groovy",
 				"storage.type.primitive.array.groovy",
 				"storage.type.primitive.groovy",
-
 				// "meta.function.parameters.python" // unsure
 			],
 			"settings": {
@@ -528,19 +477,6 @@
 			}
 		},
 		{
-			"name": "OOP lang features",
-			// Fallback for enum/struct/interface when no semantic tokens are
-			// available.  Mirrors the semanticTokenColors entries above.
-			"scope": [
-				"entity.name.type.enum",
-				"entity.name.type.struct",
-				"entity.name.type.interface"
-			],
-			"settings": {
-				"foreground": "#4EC9B0"
-			}
-		},
-		{
 			"name": "classes",
 			// Fallback for class tokens when no semantic tokens are available.
 			// entity.name.class is included here (moved from "complex types")
@@ -550,14 +486,25 @@
 				"entity.name.type.class",
 				"entity.name.class",
 				"entity.name.type.module",
-				"entity.other.inherited-class"
+				"entity.other.inherited-class",
+				// component classes (e.g. JSX/Angular/Svelte)
+				"support.class.component",
+				// namespaces / scope resolution operators
+				// "entity.name.namespace",
+				"storage.modifier.namespace",
+				"entity.name.scope-resolution",
+				// php use/namespace imports and sys-types
+				"meta.use.php",
+				"support.other.namespace.use.php",
+				"support.other.namespace.php",
+				"support.type.sys-types"
 			],
 			"settings": {
 				"foreground": "#FFFFB6"
 			}
 		},
 		{
-			"name": "functions, methods",
+			"name": "functions, methods & keys",
 			"scope": [
 				"entity.name.function",
 				"entity.name.method",
@@ -568,19 +515,15 @@
 				"meta.function-call.generic",
 				"meta.method.declaration meta.definition.method",
 				"meta.method.body storage.type.java",
-			],
-			"settings": {
-				"foreground": "#96CBFE"
-			}
-		},
-		{
-			"name": "keys",
-			"scope": [
+				// object/dict keys, ini definitions, yaml keys, json keys
 				"meta.object-literal.key",
 				"support.type.property-name",
 				"keyword.other.definition.ini",
 				"entity.name.tag.yaml",
-				"source.json support.type.property-name.json"
+				"source.json support.type.property-name.json",
+				// preprocessor directives
+				"entity.name.function.preprocessor",
+				"meta.preprocessor",
 			],
 			"settings": {
 				"foreground": "#96CBFE"
@@ -595,7 +538,6 @@
 				// svelte's bind:value, use:enhance, class:{something}
 				"source.svelte meta.directive keyword.control",
 				"source.svelte meta.directive entity.name.type",
-				
 			],
 			"settings": {
 				"foreground": "#9CDCFE"
@@ -611,7 +553,6 @@
 				"punctuation.definition.comment",
 				"comment.documentation",
 				"comment.line.documentation",
-
 				// docstrings styled as comments:
 				// "source.python string.quoted.docstring",
 				// "source.python string.quoted.docstring punctuation.definition.string"
@@ -757,31 +698,6 @@
 		},
 		{
 			"scope": [
-				"string.regexp",
-				"constant.character.escape",
-				"constant.character.set.regexp",
-				"constant.other.placeholder",
-				// brackets/braces in python regex
-				"string.regexp keyword.operator", // unsure
-				"constant.other.set.regexp", // unsure
-			],
-			"settings": {
-				"foreground": "#C6C5FE"
-				// "foreground": "#CE9178"
-			}
-		},
-		{
-			"scope": [
-				"*url*",
-				"*link*",
-				"*uri*"
-			],
-			"settings": {
-				"fontStyle": "underline"
-			}
-		},
-		{
-			"scope": [
 				"markup.bold",
 				"markup.bold string",
 				"markup.bold markup.italic",
@@ -876,19 +792,6 @@
 		},
 		{
 			"scope": [
-				"source.css support.type.property-name",
-				"source.sass support.type.property-name",
-				"source.scss support.type.property-name",
-				"source.less support.type.property-name",
-				"source.stylus support.type.property-name",
-				"source.postcss support.type.property-name",
-			],
-			"settings": {
-				"foreground": "#C6C5FE"
-			}
-		},
-		{
-			"scope": [
 				"meta.selector",
 				// "meta.attribute",
 				"entity.name.tag.css",
@@ -907,58 +810,6 @@
 			}
 		},
 		{
-			"scope": [
-				"constant.language.boolean",
-				"constant.language.json"
-			],
-			"settings": {
-				"foreground": "#E9C062"
-			}
-		},
-		{
-			"scope": [
-				"entity.name.function.preprocessor",
-				"meta.preprocessor"
-			],
-			"settings": {
-				"foreground": "#96CBFE"
-			}
-		},
-		{
-			"scope": [
-				"support.class.component"
-			],
-			"settings": {
-				"foreground": "#FFFFB6"
-			}
-		},
-		{
-			"scope": [
-				// "entity.name.namespace",
-				"storage.modifier.namespace",
-				"entity.name.scope-resolution"
-			],
-			"settings": {
-				"foreground": "#FFFFB6"
-			}
-		},
-		{
-			"name": "decorators / annotations",
-			"scope": [
-				"variable.type.parameter",
-				"variable.parameter.type",
-				"meta.decorator",
-				"storage.type.annotation",
-				"punctuation.decorator",
-				"entity.name.function.decorator",
-				"tag.decorator.js entity.name.tag.js",
-				"tag.decorator.js punctuation.definition.tag.js"
-			],
-			"settings": {
-				"foreground": "#E9C062"
-			}
-		},
-		{
 			"name": "constants",
 			"scope": [
 				"constant.numeric",
@@ -966,10 +817,22 @@
 				"support.constant",
 				"constant.character",
 				"constant.escape",
-				"keyword.other.unit",
 				"keyword.other",
 				"punctuation.definition.entity.html",
-				"source.python constant.character.format.placeholder storage.type.format"
+				"source.python constant.character.format.placeholder storage.type.format",
+				// go primitive types
+				"source.go storage.type.numeric.go",
+				"source.go storage.type.byte.go",
+				"source.go storage.type.boolean.go",
+				"source.go storage.type.string.go",
+				"source.go storage.type.uintptr.go",
+				"source.go storage.type.error.go",
+				"source.go storage.type.rune.go",
+				// markdown/mdx list markers and separators
+				"meta.separator.markdown",
+				"string.other.number.mdx",
+				"variable.ordered.list.mdx",
+				"variable.unordered.list.mdx"
 			],
 			"settings": {
 				"foreground": "#E9C062"
@@ -990,40 +853,13 @@
 			}
 		},
 		{
-			"name": "go",
 			"scope": [
-				"source.go storage.type.numeric.go",
-				"source.go storage.type.byte.go",
-				"source.go storage.type.boolean.go",
-				"source.go storage.type.string.go",
-				"source.go storage.type.uintptr.go",
-				"source.go storage.type.error.go",
-				"source.go storage.type.rune.go",
+				"*url*",
+				"*link*",
+				"*uri*"
 			],
 			"settings": {
-				"foreground": "#E9C062"
-			}
-		},
-		{
-			"scope": [
-				"meta.separator.markdown",
-				"string.other.number.mdx",
-				"variable.ordered.list.mdx",
-				"variable.unordered.list.mdx"
-			],
-			"settings": {
-				"foreground": "#E9C062"
-			}
-		},
-		{
-			"scope": [
-				"meta.use.php",
-				"support.other.namespace.use.php",
-				"support.other.namespace.php",
-				"support.type.sys-types"
-			],
-			"settings": {
-				"foreground": "#FFFFB6"
+				"fontStyle": "underline"
 			}
 		},
 	]
