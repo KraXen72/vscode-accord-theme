@@ -20,10 +20,10 @@
 	let content = $state(data.revision?.content || '');
 	let comment = $state(data.revision?.comment || '');
 	let arrangementName = $state(data.arrangement?.arrangementName || '');
-	
+
 	// Base key (from revision or song default)
 	const baseKey = data.revision?.key || data.song.originalKey || 'C';
-	
+
 	// PDF styling state
 	let pdfStyle = $state({
 		fontSize: data.revision?.fontSize || 16,
@@ -61,7 +61,7 @@
 	// Form submission handler
 	const submitRevision: SubmitFunction = ({ formData }) => {
 		validationError = '';
-		
+
 		// Add mode and IDs
 		formData.set('mode', data.mode);
 		formData.set('songId', data.songId.toString());
@@ -71,14 +71,14 @@
 		if (data.returnState.setId) {
 			formData.set('setId', data.returnState.setId.toString());
 		}
-		
+
 		// Add content and styling
 		formData.set('content', content);
 		formData.set('key', currentDisplayedKey);
 		formData.set('comment', comment);
 		formData.set('fontSize', pdfStyle.fontSize.toString());
 		formData.set('lineHeight', pdfStyle.lineHeight.toString());
-		
+
 		// Add arrangement name for new arrangements
 		if (data.mode === 'arrangement' && !data.arrangementId) {
 			formData.set('arrangementName', arrangementName);
@@ -255,4 +255,3 @@
 		grid-column: 1 / -1;
 	}
 </style>
-

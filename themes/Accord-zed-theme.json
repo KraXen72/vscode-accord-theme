@@ -246,7 +246,13 @@
             "color": "#dd77db"
           },
           "keyword.import": {
-            "color": "#B5B3AA"
+            "color": "#dd77db"
+          },
+          "keyword.operator": {
+            "color": "#ffffffd3"
+          },
+          "keyword.preproc": {
+            "color": "#96CBFE"
           },
           "operator": {
             "color": "#ffffffd3"
@@ -260,6 +266,15 @@
           "function.method": {
             "color": "#96CBFE"
           },
+          "function.decorator": {
+            "color": "#C6C5FE"
+          },
+          "function.decorator.call": {
+            "color": "#C6C5FE"
+          },
+          "function.kwargs": {
+            "color": "#ffffffd3"
+          },
           "constructor": {
             "color": "#FFFFB6"
           },
@@ -271,6 +286,39 @@
           },
           "enum": {
             "color": "#4EC9B0"
+          },
+          "type.class.call": {
+            "color": "#96CBFE"
+          },
+          "type.class": {
+            "color": "#FFFFB6"
+          },
+          "type.class.builtin": {
+            "color": "#FFFFB6"
+          },
+          "type.class.definition": {
+            "color": "#FFFFB6"
+          },
+          "type.class.inheritance": {
+            "color": "#FFFFB6"
+          },
+          "type.definition": {
+            "color": "#4EC9B0"
+          },
+          "type.interface": {
+            "color": "#4EC9B0"
+          },
+          "type.unit": {
+            "color": "#E9C062"
+          },
+          "module": {
+            "color": "#FFFFB6"
+          },
+          "attribute.builtin": {
+            "color": "#C6C5FE"
+          },
+          "attribute.function": {
+            "color": "#9CDCFE"
           },
           "variant": {
             "color": "#FFFFB6"
@@ -334,6 +382,36 @@
           "tag": {
             "color": "#FF6C60"
           },
+          "tag.jsx": {
+            "color": "#FF6C60"
+          },
+          "tag.component.jsx": {
+            "color": "#FFFFB6"
+          },
+          "tag.component.type.constructor": {
+            "color": "#FFFFB6"
+          },
+          "tag.property": {
+            "color": "#96CBFE"
+          },
+          "tag.punctuation.bracket": {
+            "color": "#B5B3AA"
+          },
+          "tag.punctuation.special": {
+            "color": "#B5B3AA"
+          },
+          "tag.keyword": {
+            "color": "#ffffffd3"
+          },
+          "attribute.jsx": {
+            "color": "#9CDCFE"
+          },
+          "punctuation.bracket.jsx": {
+            "color": "#B5B3AA"
+          },
+          "punctuation.delimiter.jsx": {
+            "color": "#B5B3AA"
+          },
           "selector": {
             "color": "#D7BA7D"
           },
@@ -368,6 +446,28 @@
           },
           "diff.minus": {
             "color": "#FF6C60"
+          },
+          "diff.delta": {
+            "color": "#FF73FD"
+          },
+          "diff.delta.moved": {
+            "color": "#FF73FD"
+          },
+          "markup.heading": {
+            "color": "#FFFFB6",
+            "font_weight": 700
+          },
+          "markup.link.url": {
+            "color": "#96CBFE"
+          },
+          "punctuation.embedded.markup": {
+            "color": "#00000050"
+          },
+          "string.special.path": {
+            "color": "#adf263"
+          },
+          "concept": {
+            "color": "#4EC9B0"
           },
           "hint": {
             "color": "#4EC9B0"

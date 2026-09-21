@@ -61,8 +61,8 @@ def metadata_applier(tags: Tags, fixed_location: Path, exclude_tags: list[str], 
 	handle.delete()
 	# print({**tags, "cover_bytes": ""})
 	for k, v in tags.items():
-		
-		if k in exclude_tags or k in ["cover_url", "cover_bytes"]: 
+
+		if k in exclude_tags or k in ["cover_url", "cover_bytes"]:
 			continue
 		if k == "date":
 			v = parser.isoparse(str(v)).date()
@@ -73,7 +73,7 @@ def metadata_applier(tags: Tags, fixed_location: Path, exclude_tags: list[str], 
 				setattr(handle, k,  MV_SEPARATOR.join(v) if fallback_mv else MV_SEPARATOR_VISUAL.join(v))
 		else:
 			setattr(handle, k, v)
-	
+
 	if "cover" not in exclude_tags:
 		cover_bytes = tags.get("cover_bytes") or get_cover(tags["cover_url"])
 		handle.images = [ MFImage(data=cover_bytes, desc="Cover", type=ImageType.front) ]
@@ -90,7 +90,7 @@ def get_cover(url):
 
 def get_cover_local(file_path: Path, id_or_url: str, is_soundcloud: bool):
 	"""
-	reads a local image as bytes.  
+	reads a local image as bytes.
 	if given a directory, finds the matching image by filename stem matching id_or_url
 	"""
 	if file_path.is_file():
@@ -107,7 +107,7 @@ def get_cover_local(file_path: Path, id_or_url: str, is_soundcloud: bool):
 def get_dominant_color(pil_img: Image.Image) -> tuple[int, int, int, int]:
 	img = pil_img.copy().convert("RGBA")
 	img = img.resize((1, 1), resample=Image.Resampling.NEAREST)
-	
+
 	pixel = img.getpixel((0, 0))
 
 	# Explicitly ensure the return type is always Tuple[int, int, int, int]
@@ -135,13 +135,13 @@ def determine_image_crop(image_bytes: bytes):
 	"""
 	samples 4 pixels near the corners and 2 from centers of side slices of the thumbnail (which is first smoothed and reduced to 64 colors)
 
-	returns 'crop' if average of standard deviation of r, g and b color channels 
+	returns 'crop' if average of standard deviation of r, g and b color channels
 	from each sample point is lower than a than a threshold, otherwise returns 'pad'
 	"""
 	pil_img = Image.open(BytesIO(image_bytes))
 	filt_image = pil_img.filter(ImageFilter.SMOOTH).convert("P", palette=Image.ADAPTIVE, colors=64)
 	rgb_filt_image = filt_image.convert("RGB")
-	
+
 	width, height = rgb_filt_image.size
 	sample_colors50 = sample_image_corners(rgb_filt_image, width, height, 50)
 	sample_colors0 = sample_image_corners(rgb_filt_image, width, height, 1)
@@ -182,7 +182,7 @@ def get_1x1_cover(url: str, temp_location: Path, uniqueid: str, cover_format = "
 
 	if cover_crop_method == "auto":
 		cover_crop_method, recc_fill_color = determine_image_crop(image_bytes)
-	
+
 	if cover_crop_method == "crop":
 		img_half = round(width / 2)
 		rect_half = round(height / 2)
@@ -213,14 +213,14 @@ def clean_title(title: str):
 
 	for char in title_banned_chars:
 		title = title.replace(char, "")
-	for lb, rb in bracket_tuples: 
+	for lb, rb in bracket_tuples:
 		lbe, rbe = re.escape(lb), re.escape(rb) # check for all matching variations of brackets
 		for m in re.finditer(rf"{lbe}([^{lbe}{rbe}]+){rbe}", title):
 			subs = "" # preserve info about a song cover or it's japanese title
 			if "cover" in m.group(0).lower() or re.match(r"^[一-龠]+|[ぁ-ゔ]+|[ァ-ヴー]+|[々〆〤ヶ]+|\s+$", m.group(1)) is not None:
 				subs = f"[{m.group(1)}]"
 			title = title.replace(m.group(0), subs)
-	
+
 	title = re.sub(yeet_emoji, "", title) # remove emoji
 	title = re.sub(r"\*\b[A-Z ]+\b\*", "", title) # remove stuff like *NOW ON ALL PLATFORMS*
 	title = re.sub(r"(\S)\[", r"\g<1>" + " [", title, flags=re.MULTILINE) # jap title whitespace fix
