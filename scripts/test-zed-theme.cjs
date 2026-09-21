@@ -4,7 +4,6 @@ const fs = require("node:fs");
 const path = require("node:path");
 const { execFileSync } = require("node:child_process");
 const Ajv = require("ajv");
-const { parse } = require("jsonc-parser");
 
 const root = path.join(__dirname, "..");
 const themePath = path.join(root, "themes", "Accord-zed-theme.json");
@@ -22,27 +21,12 @@ const schema = JSON.parse(fs.readFileSync(path.join(root, "schemas", "zed-theme-
 const validate = new Ajv({ strict: false }).compile(schema);
 assert.ok(validate(theme), JSON.stringify(validate.errors, null, 2));
 
-const source = parse(fs.readFileSync(path.join(root, "themes", "Accord-color-theme.json"), "utf8"));
 const style = theme.themes[0].style;
-const exactMappings = {
-  "editor.background": "editor.background",
-  "editor.foreground": "editor.foreground",
-  "editor.active_line.background": "editor.lineHighlightBackground",
-  "editor.document_highlight.bracket_background": "editorBracketMatch.background",
-  "status_bar.background": "statusBar.background",
-  "title_bar.background": "titleBar.activeBackground",
-  "tab.active_background": "tab.activeBackground",
-  "tab.inactive_background": "tab.inactiveBackground",
-  "panel.background": "sideBar.background",
-  "scrollbar.thumb.background": "scrollbarSlider.background",
-  "scrollbar.thumb.hover_background": "scrollbarSlider.hoverBackground",
-  "search.match_background": "editor.findMatchHighlightBackground",
-  text: "foreground",
-  icon: "icon.foreground",
-};
-for (const [zedKey, vscodeKey] of Object.entries(exactMappings)) {
-  assert.equal(style[zedKey], source.colors[vscodeKey], `${zedKey} must track ${vscodeKey}`);
-}
+const baseline = JSON.parse(fs.readFileSync(
+  path.join(root, "third_party", "vscode-dark-modern", "ui-style.json"),
+));
+const { syntax: _syntax, ...generatedUi } = style;
+assert.deepEqual(generatedUi, baseline, "generated UI must exactly match the vendored baseline");
 
 const requiredCaptures = [
   "attribute", "boolean", "comment", "comment.doc", "constant", "constant.builtin",

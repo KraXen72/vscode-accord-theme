@@ -39,10 +39,14 @@ pnpm build:zed
 pnpm test:zed
 ```
 
-`build:zed` reads `themes/Accord-color-theme.json` and writes
+`build:zed` combines Accord syntax colors from `themes/Accord-color-theme.json`
+with the vendored, MIT-licensed VSCode Dark Modern Zed UI baseline and writes
 `themes/Accord-zed-theme.json`. `test:zed` checks the generated file against
-Zed's v0.2.0 theme schema, verifies exact UI color mappings and standard syntax
-capture coverage, and checks the complete demo corpus.
+Zed's v0.2.0 schema, verifies the non-syntax style exactly matches that pinned
+baseline, verifies standard syntax capture coverage, and checks the demo corpus.
+
+The baseline provenance and upstream license are in
+`third_party/vscode-dark-modern/`.
 
 ### Zed previews
 
