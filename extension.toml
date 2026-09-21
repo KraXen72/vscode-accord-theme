@@ -1,0 +1,7 @@
+id = "accord-theme"
+name = "Accord Theme"
+version = "2.9.1"
+schema_version = 1
+authors = ["KraXen72"]
+description = "A familiar, robust and well-thought-out dark theme"
+repository = "https://github.com/KraXen72/vscode-accord-theme"

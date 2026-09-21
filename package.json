@@ -32,6 +32,11 @@
     ]
   },
   "devDependencies": {
+    "ajv": "^8.20.0",
     "jsonc-parser": "^3.3.1"
+  },
+  "scripts": {
+    "build:zed": "node scripts/build-zed-theme.cjs",
+    "test:zed": "node scripts/test-zed-theme.cjs"
   }
 }

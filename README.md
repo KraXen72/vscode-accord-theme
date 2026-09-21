@@ -26,3 +26,28 @@ Please to report any issues with syntax higlighting
 - thanks to VS Code's documentation: [Syntax Highlight Guide](https://code.visualstudio.com/api/language-extensions/syntax-highlight-guide)
   
 I recommend you use the theme with the **Carbon Product Icons** (used in screenshots) - [repo](https://github.com/antfu/vscode-icons-carbon), [marketplace](https://marketplace.visualstudio.com/items?itemName=antfu.icons-carbon)
+
+## Zed
+
+The repository also contains a native Zed extension. Install this directory with
+**zed: install dev extension**, then select **Accord** in the theme selector.
+
+The generated Zed theme is kept in sync with the VS Code source theme:
+
+```sh
+pnpm build:zed
+pnpm test:zed
+```
+
+`build:zed` reads `themes/Accord-color-theme.json` and writes
+`themes/Accord-zed-theme.json`. `test:zed` checks the generated file against
+Zed's v0.2.0 theme schema, verifies exact UI color mappings and standard syntax
+capture coverage, and checks the complete demo corpus.
+
+### Zed previews
+
+![Accord in Zed with TypeScript](screenshots/zed-typescript.png)
+
+![Accord in Zed with HTML](screenshots/zed-html.png)
+
+![Accord in Zed with Markdown](screenshots/zed-markdown.png)
