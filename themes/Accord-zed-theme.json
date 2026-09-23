@@ -249,7 +249,7 @@
             "color": "#dd77db"
           },
           "keyword.operator": {
-            "color": "#ffffffd3"
+            "color": "#dd77db"
           },
           "keyword.preproc": {
             "color": "#96CBFE"
