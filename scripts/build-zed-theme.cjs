@@ -35,7 +35,6 @@ function scopeColor(scope) {
 
 const foreground = source.colors["editor.foreground"];
 const muted = source.colors.descriptionForeground;
-const red = tokenColor("invalid text");
 const yellow = tokenColor("constants");
 const blue = tokenColor("functions, methods & keys");
 const cyan = tokenColor("complex types");
@@ -44,8 +43,18 @@ const green = tokenColor("strings");
 const comments = tokenColor("comments");
 const attributes = tokenColor("attributes");
 const tags = tokenColor("html tags");
+const classes = tokenColor("classes");
+const specialStrings = tokenColor("css colors and similar");
+const inlineCode = tokenColor("markdown/markup inline code");
 const selectors = scopeColor("meta.selector");
 const primitives = tokenColor("primitive types, decorators & regex");
+const punctuation = scopeColor("punctuation");
+const listMarker = scopeColor("beginning.punctuation.definition.list.markdown");
+const strong = scopeColor("markup.bold");
+const heading = scopeColor("markup.heading");
+const deleted = scopeColor("markup.deleted");
+const changed = scopeColor("markup.changed");
+const fencedMarkup = scopeColor("punctuation.definition.fenced.markdown");
 
 const syntax = {
 	primary: { color: foreground },
@@ -68,23 +77,23 @@ const syntax = {
 	"function.decorator.call": { color: primitives },
 	// Zed exposes Python call-site roles that are more precise than the generic fallbacks.
 	"function.kwargs": { color: foreground },
-	constructor: { color: "#FFFFB6" },
+	constructor: { color: classes },
 	type: { color: cyan },
 	"type.builtin": { color: primitives },
 	enum: { color: cyan },
 	"type.class.call": { color: blue },
-	"type.class": { color: "#FFFFB6" },
-	"type.class.builtin": { color: "#FFFFB6" },
-	"type.class.definition": { color: "#FFFFB6" },
-	"type.class.inheritance": { color: "#FFFFB6" },
+	"type.class": { color: classes },
+	"type.class.builtin": { color: classes },
+	"type.class.definition": { color: classes },
+	"type.class.inheritance": { color: classes },
 	"type.definition": { color: cyan },
 	"type.interface": { color: cyan },
 	"type.unit": { color: yellow },
-	module: { color: "#FFFFB6" },
+	module: { color: classes },
 	"attribute.builtin": { color: primitives },
 	"attribute.function": { color: attributes },
-	variant: { color: "#FFFFB6" },
-	namespace: { color: "#FFFFB6" },
+	variant: { color: classes },
+	namespace: { color: classes },
 	constant: { color: yellow },
 	"constant.builtin": { color: yellow },
 	boolean: { color: yellow },
@@ -92,44 +101,44 @@ const syntax = {
 	string: { color: green },
 	"string.escape": { color: primitives },
 	"string.regex": { color: primitives },
-	"string.special": { color: "#CE9178" },
+	"string.special": { color: specialStrings },
 	"string.special.symbol": { color: green },
 	comment: { color: comments, font_style: "italic" },
 	"comment.doc": { color: comments, font_style: "italic" },
-	punctuation: { color: "#B5B3AA" },
-	"punctuation.bracket": { color: "#B5B3AA" },
-	"punctuation.delimiter": { color: "#B5B3AA" },
-	"punctuation.list_marker": { color: "#6796E6" },
+	punctuation: { color: punctuation },
+	"punctuation.bracket": { color: punctuation },
+	"punctuation.delimiter": { color: punctuation },
+	"punctuation.list_marker": { color: listMarker },
 	"punctuation.markup": { color: blue },
-	"punctuation.special": { color: "#B5B3AA" },
+	"punctuation.special": { color: punctuation },
 	tag: { color: tags },
 	// Exact composite captures prevent JSX/Svelte tokens from falling back to the red tag style.
 	"tag.jsx": { color: tags },
-	"tag.component.jsx": { color: "#FFFFB6" },
-	"tag.component.type.constructor": { color: "#FFFFB6" },
+	"tag.component.jsx": { color: classes },
+	"tag.component.type.constructor": { color: classes },
 	"tag.property": { color: blue },
-	"tag.punctuation.bracket": { color: "#B5B3AA" },
-	"tag.punctuation.special": { color: "#B5B3AA" },
+	"tag.punctuation.bracket": { color: punctuation },
+	"tag.punctuation.special": { color: punctuation },
 	"tag.keyword": { color: foreground },
 	"attribute.jsx": { color: attributes },
-	"punctuation.bracket.jsx": { color: "#B5B3AA" },
-	"punctuation.delimiter.jsx": { color: "#B5B3AA" },
+	"punctuation.bracket.jsx": { color: punctuation },
+	"punctuation.delimiter.jsx": { color: punctuation },
 	selector: { color: selectors },
 	"selector.pseudo": { color: selectors },
 	embedded: { color: foreground },
 	emphasis: { font_style: "italic" },
-	"emphasis.strong": { color: "#FF6C60", font_weight: 700 },
-	title: { color: "#FFFFB6", font_weight: 700 },
-	"text.literal": { color: "#CE9178" },
+	"emphasis.strong": { color: strong, font_weight: 700 },
+	title: { color: heading, font_weight: 700 },
+	"text.literal": { color: inlineCode },
 	link_text: { color: cyan },
 	link_uri: { color: blue },
 	"diff.plus": { color: green },
-	"diff.minus": { color: "#FF6C60" },
-	"diff.delta": { color: "#FF73FD" },
-	"diff.delta.moved": { color: "#FF73FD" },
-	"markup.heading": { color: "#FFFFB6", font_weight: 700 },
+	"diff.minus": { color: deleted },
+	"diff.delta": { color: changed },
+	"diff.delta.moved": { color: changed },
+	"markup.heading": { color: heading, font_weight: 700 },
 	"markup.link.url": { color: blue },
-	"punctuation.embedded.markup": { color: "#00000050" },
+	"punctuation.embedded.markup": { color: fencedMarkup },
 	"string.special.path": { color: green },
 	concept: { color: cyan },
 	hint: { color: cyan },
