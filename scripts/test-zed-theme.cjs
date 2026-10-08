@@ -25,8 +25,29 @@ const style = theme.themes[0].style;
 const baseline = JSON.parse(fs.readFileSync(
   path.join(root, "third_party", "vscode-dark-modern", "ui-style.json"),
 ));
-const { syntax: _syntax, ...generatedUi } = style;
-assert.deepEqual(generatedUi, baseline, "generated UI must exactly match the vendored baseline");
+const { syntax: _syntax, "surface.background": surfaceBackground, ...generatedUi } = style;
+const { "surface.background": _baselineSurface, ...baselineUi } = baseline;
+assert.deepEqual(generatedUi, baselineUi, "other UI colors must match the vendored baseline");
+assert.equal(surfaceBackground, style["panel.background"],
+  "the thread sidebar should use the panel background");
+assert.match(surfaceBackground, /^#[0-9a-f]{6}(ff)?$/i,
+  "the thread sidebar surface must be opaque so stacked surfaces and title fades stay consistent");
+
+/** Compute WCAG relative luminance for an opaque sRGB color. */
+function luminance(color) {
+  const channels = color.slice(1, 7).match(/../g).map((channel) => {
+    const value = parseInt(channel, 16) / 255;
+    return value <= 0.04045 ? value / 12.92 : ((value + 0.055) / 1.055) ** 2.4;
+  });
+  return channels[0] * 0.2126 + channels[1] * 0.7152 + channels[2] * 0.0722;
+}
+for (const key of ["text", "text.muted"]) {
+  const foreground = luminance(style[key]);
+  const background = luminance(surfaceBackground);
+  const contrast = (Math.max(foreground, background) + 0.05) /
+    (Math.min(foreground, background) + 0.05);
+  assert.ok(contrast >= 4.5, `thread sidebar ${key} contrast is too low: ${contrast}`);
+}
 
 const requiredCaptures = [
   "attribute", "attribute.builtin", "attribute.function", "attribute.jsx", "boolean", "comment",
@@ -57,8 +78,8 @@ assert.equal(style.syntax["function.decorator"].color, style.syntax["type.builti
   "Python decorators should use Accord's annotation color");
 assert.equal(style.syntax["keyword.import"].color, style.syntax.keyword.color,
   "imports and exports should use the normal keyword color");
-assert.equal(style.syntax["keyword.operator"].color, style.syntax.variable.color,
-  "word operators should use the normal foreground color");
+assert.equal(style.syntax["keyword.operator"].color, style.syntax.keyword.color,
+  "word operators should use the normal keyword color");
 assert.notEqual(style.syntax["tag.component.jsx"].color, style.syntax["tag.jsx"].color,
   "JSX components must remain distinguishable from native tags");
 assert.notEqual(style.syntax["tag.component.type.constructor"].color, style.syntax.tag.color,

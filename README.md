@@ -32,6 +32,14 @@ I recommend you use the theme with the **Carbon Product Icons** (used in screens
 The repository also contains a native Zed extension. Install this directory with
 **zed: install dev extension**, then select **Accord** in the theme selector.
 
+To install or update from this checkout:
+
+1. Run `pnpm install` (once, or when dependencies change), then `pnpm build:zed`.
+2. In Zed, open the command palette (`Ctrl+Shift+P` on Windows/Linux) and run
+   **zed: install dev extension**. Select the repository directory containing
+   `extension.toml`, not the `themes` directory.
+3. Select **Accord** with **theme selector: toggle** (`Ctrl+K Ctrl+T`).
+
 The generated Zed theme is kept in sync with the VS Code source theme:
 
 ```sh
@@ -40,10 +48,17 @@ pnpm test:zed
 ```
 
 `build:zed` combines Accord syntax colors from `themes/Accord-color-theme.json`
-with the vendored, MIT-licensed VSCode Dark Modern Zed UI baseline and writes
+with the vendored, MIT-licensed VSCode Dark Modern Zed UI baseline, applies
+Accord's compatibility overrides, and writes
 `themes/Accord-zed-theme.json`. `test:zed` checks the generated file against
-Zed's v0.2.0 schema, verifies the non-syntax style exactly matches that pinned
-baseline, verifies standard syntax capture coverage, and checks the demo corpus.
+Zed's v0.2.0 schema, verifies the UI baseline and compatibility overrides,
+checks sidebar text contrast, verifies standard syntax capture coverage, and
+checks the demo corpus.
+
+The `surface.background` override uses the baseline's opaque `panel.background`.
+Zed 1.23.2 uses this surface for the thread sidebar, its rows' title fades, and
+sticky headers; the baseline's translucent scrollbar gray makes that sidebar
+unreadable.
 
 The baseline provenance and upstream license are in
 `third_party/vscode-dark-modern/`.

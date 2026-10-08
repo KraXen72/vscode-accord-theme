@@ -150,7 +150,17 @@ const theme = {
 	name: "Accord",
 	author: "KraXen72",
 	themes: [
-		{ name: "Accord", appearance: "dark", style: { ...baseline, syntax } },
+		{
+			name: "Accord",
+			appearance: "dark",
+			style: {
+				...baseline,
+				// Zed's thread sidebar uses this surface for its background and title fades.
+				// The baseline's translucent scrollbar gray is unsuitable for that surface.
+				"surface.background": baseline["panel.background"],
+				syntax,
+			},
+		},
 	],
 };
 
