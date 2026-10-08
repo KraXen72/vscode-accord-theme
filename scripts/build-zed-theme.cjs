@@ -55,6 +55,12 @@ const heading = scopeColor("markup.heading");
 const deleted = scopeColor("markup.deleted");
 const changed = scopeColor("markup.changed");
 const fencedMarkup = scopeColor("punctuation.definition.fenced.markdown");
+// Zed applies one fill to markers and content. Match VS Code's content fills,
+// which the baseline preserves under the legacy keys, rather than its stronger headers.
+const conflictOurs = source.colors["merge.currentContentBackground"]
+	?? baseline.version_control_conflict_ours_background;
+const conflictTheirs = source.colors["merge.incomingContentBackground"]
+	?? baseline.version_control_conflict_theirs_background;
 
 const syntax = {
 	primary: { color: foreground },
@@ -158,6 +164,11 @@ const theme = {
 				// Zed's thread sidebar uses this surface for its background and title fades.
 				// The baseline's translucent scrollbar gray is unsuitable for that surface.
 				"surface.background": baseline["panel.background"],
+				"version_control.conflict_marker.ours": conflictOurs,
+				"version_control.conflict_marker.theirs": conflictTheirs,
+				// Keep the deprecated names consistent for older Zed versions.
+				version_control_conflict_ours_background: conflictOurs,
+				version_control_conflict_theirs_background: conflictTheirs,
 				syntax,
 			},
 		},

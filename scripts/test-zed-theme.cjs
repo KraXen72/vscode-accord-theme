@@ -25,9 +25,16 @@ const style = theme.themes[0].style;
 const baseline = JSON.parse(fs.readFileSync(
   path.join(root, "third_party", "vscode-dark-modern", "ui-style.json"),
 ));
-const { syntax: _syntax, "surface.background": surfaceBackground, ...generatedUi } = style;
-const { "surface.background": _baselineSurface, ...baselineUi } = baseline;
-assert.deepEqual(generatedUi, baselineUi, "other UI colors must match the vendored baseline");
+const { syntax: _syntax, ...generatedUi } = style;
+assert.deepEqual(generatedUi, {
+  ...baseline,
+  "surface.background": baseline["panel.background"],
+  "version_control.conflict_marker.ours": "#40C8AE33",
+  "version_control.conflict_marker.theirs": "#40A6FF33",
+  version_control_conflict_ours_background: "#40C8AE33",
+  version_control_conflict_theirs_background: "#40A6FF33",
+}, "UI colors must match the baseline with Accord's sidebar and VS Code conflict content fills");
+const surfaceBackground = style["surface.background"];
 assert.equal(surfaceBackground, style["panel.background"],
   "the thread sidebar should use the panel background");
 assert.match(surfaceBackground, /^#[0-9a-f]{6}(ff)?$/i,
