@@ -235,7 +235,9 @@
 	"tokenColors": [
 		{
 			"scope": [
-				"source"
+				"source",
+				// JSX text inherits meta.tag's grey unless children reset the text color.
+				"meta.jsx.children"
 			],
 			"settings": {
 				"foreground": "#FFFFFFD3"
